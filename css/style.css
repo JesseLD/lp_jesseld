@@ -1,0 +1,17 @@
+* {
+  font-family: "DM Mono", sans-serif;
+  color: white;
+}
+
+.bg-default {
+  background-color: #121608;
+  /* overflow: hidden; */
+}
+
+.highlight-text{
+  color:  #84EC8E;
+}
+#lang-row{
+  /* overflow: hidden; */
+}
+
