@@ -7,9 +7,16 @@
   background-color: #121608;
   /* overflow: hidden; */
 }
+.text-default {
+  color: #121608;
+  /* overflow: hidden; */
+}
 
 .highlight-text{
   color:  #84EC8E;
+}
+.bg-highlight{
+  background:  #84EC8E;
 }
 #lang-row{
   /* overflow: hidden; */
