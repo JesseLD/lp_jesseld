@@ -4,19 +4,19 @@
 }
 
 .bg-default {
-  background-color: #121608;
+  background-color: #080916;
   /* overflow: hidden; */
 }
 .text-default {
-  color: #121608;
+  color: #080916;
   /* overflow: hidden; */
 }
 
 .highlight-text{
-  color:  #84EC8E;
+  color:  #007Aff;
 }
 .bg-highlight{
-  background:  #84EC8E;
+  background:  #007Aff;
 }
 #lang-row{
   /* overflow: hidden; */
