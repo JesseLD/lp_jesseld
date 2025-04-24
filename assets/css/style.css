@@ -1,0 +1,74 @@
+body {
+  scroll-behavior: smooth;
+}
+.text-primary {
+  color: #007aff;
+}
+.text-primary:hover {
+  color: #007aff;
+}
+.bg-primary {
+  background-color: #007aff;
+}
+.bg-secondary-light {
+  background-color: #12181d;
+}
+.bg-secondary {
+  background-color: #03090e;
+}
+
+/* .nav-link { */
+  /* padding: 4px 0; */
+  /* border-bottom: 2px solid transparent; */
+  /* min-height: 28px; */
+/* } */
+/* .active { */
+  /* border-bottom: 2px solid #007aff; */
+  /* padding: 4px 0; */
+  /* transition: all 0.3s ease-in-out; */
+
+  /* animation: activeAnim 0.3s ease-in-out; */
+/* } */
+
+/* .active:hover {
+  border-bottom: 2px solid #007aff;
+  padding: 4px 0;
+  transition: all 0.3s ease-in-out;
+
+} */
+
+.nav-link {
+  position: relative;
+  padding: 4px 0;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #007aff;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Link ativo sempre com sublinhado */
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Cor e negrito opcional pro ativo */
+.nav-link.active {
+  color: #007aff;
+  font-weight: bold;
+}
