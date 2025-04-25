@@ -22,7 +22,7 @@
     <title>Jessé Oliveira | Portfólio</title>
   </head>
   <body class="bg-secondary text-white">
-    <div id="_app" class="flex flex-col">
+    <div id="_app" class="flex flex-col relative">
       <header
         class="w-full bg-secondary-light h-20 px-[10vw] flex items-center justify-between fixed z-20"
       >
@@ -30,31 +30,95 @@
           <img src="assets/img/logo.png" alt="" class="pointer-events-none" />
         </div>
         <nav class="space-x-4 font-bold relative hidden lg:flex">
-          <a href="#home" id="link-home" class="nav-link hover:text-blue-500 transition cursor-pointer"
+          <a
+            href="#home"
+            id="link-home"
+            class="nav-link hover:text-blue-500 transition cursor-pointer"
             >Home</a
           >
-          <a href="#about" id="link-about"  class="nav-link hover:text-blue-500 transition cursor-pointer"
+          <a
+            href="#about"
+            id="link-about"
+            class="nav-link hover:text-blue-500 transition cursor-pointer"
             >Sobre</a
           >
           <a
-            href="#skills" id="link-skills" 
-            class="nav-link  hover:text-blue-500 transition cursor-pointer"
+            href="#skills"
+            id="link-skills"
+            class="nav-link hover:text-blue-500 transition cursor-pointer"
             >Skills</a
           >
           <a
-            href="#education" id="link-education" 
+            href="#education"
+            id="link-education"
             class="nav-link hover:text-blue-500 transition cursor-pointer"
             >Educação</a
           >
           <a
-            href="#projects" id="link-projects" 
+            href="#projects"
+            id="link-projects"
             class="nav-link hover:text-blue-500 transition cursor-pointer"
             >Projetos</a
           >
-          <a href="#experiences" id="link-experiences"  class="nav-link text-primary transition cursor-pointer"
+          <a
+            href="#experiences"
+            id="link-experiences"
+            class="nav-link text-primary transition cursor-pointer"
             >Experiências</a
           >
         </nav>
+
+        <!-- <div class="lg:hidden"> -->
+        <ion-icon
+          id="mobile-btn"
+          class="text-4xl text-blue-600 lg:hidden"
+          name="menu-outline"
+        ></ion-icon>
+        <!-- </div> -->
+
+        <div
+          id="mobile-menu"
+          class="lg:hidden absolute top-20 right-0 z-10 w-64 h-screen bg-gray-900/40 border border-blue-300/5 backdrop-blur-md rounded-lg shadow-lg p-4"
+        >
+          <nav class="flex flex-col space-y-4 font-bold">
+            <a
+              href="#home"
+              id="link-home-mb"
+              class="nav-link hover:text-blue-500 transition cursor-pointer"
+              >Home</a
+            >
+            <a
+              href="#about"
+              id="link-about-mb"
+              class="nav-link hover:text-blue-500 transition cursor-pointer"
+              >Sobre</a
+            >
+            <a
+              href="#skills"
+              id="link-skills-mb"
+              class="nav-link hover:text-blue-500 transition cursor-pointer"
+              >Skills</a
+            >
+            <a
+              href="#education"
+              id="link-education-mb"
+              class="nav-link hover:text-blue-500 transition cursor-pointer"
+              >Educação</a
+            >
+            <a
+              href="#projects"
+              id="link-projects-mb"
+              class="nav-link hover:text-blue-500 transition cursor-pointer"
+              >Projetos</a
+            >
+            <a
+              href="#experiences"
+              id="link-experiences-mb"
+              class="nav-link text-primary transition cursor-pointer"
+              >Experiências</a
+            >
+          </nav>
+        </div>
       </header>
       <div class="mb-30 lg:mb-0"></div>
 
@@ -64,7 +128,7 @@
       >
         <div id="tsparticles" class="fixed -z-10"></div>
         <div
-          class="flex flex-col items-start justify-center bg-gray-900/20 backdrop-blur-md p-8 rounded-xl lg:min-w-[480px]"
+          class="flex flex-col items-start justify-center bg-gray-900/20 border border-blue-300/5 backdrop-blur-md p-8 rounded-xl lg:min-w-[480px]"
         >
           <h1 class="text-4xl font-bold mb-2">Olá eu sou,</h1>
           <h1 class="text-6xl font-bold mb-4">Jessé Oliveira</h1>
@@ -99,7 +163,7 @@
         <img
           src="assets/img/me.png"
           alt="Imagem de Jessé Oliveira"
-          class="w-70vw lg:w-1/3 h-auto rounded-lg shadow-lg pointer-events-none"
+          class="w-70vw lg:w-1/3 h-auto rounded-lg drop-shadow-md drop-shadow-blue-700 pointer-events-none"
         />
       </section>
 
@@ -110,7 +174,7 @@
         class="w-full relative flex items-center justify-between px-[5vw] lg:px-[10vw]"
       >
         <div
-          class="bg-gray-900/40 backdrop-blur-md w-full min-h-dvh p-8 rounded-2xl"
+          class="bg-gray-900/40 border border-blue-300/5 backdrop-blur-md w-full min-h-dvh p-8 rounded-2xl"
         >
           <div class="text-4xl text-center font-bold mb-4">
             <h1><span class="text-primary">Sobre</span> Mim</h1>
@@ -194,7 +258,7 @@
         class="w-full relative flex items-center justify-between px-[5vw] lg:px-[10vw] mt-16"
       >
         <div
-          class="bg-gray-900/40 backdrop-blur-md w-full min-h-dvh p-8 rounded-2xl"
+          class="bg-gray-900/40 border border-blue-300/5 backdrop-blur-md w-full min-h-dvh p-8 rounded-2xl"
         >
           <div class="text-4xl text-center font-bold mb-4">
             <h1><span class="text-primary">Skills</span> & Habilidades</h1>
@@ -203,6 +267,122 @@
             id="skills-container"
             class="mt-12 lg:mt-24 grid grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-16 justify-items-center"
           ></div>
+        </div>
+      </section>
+
+      <section
+        id="education"
+        class="w-full relative flex items-center justify-between px-[5vw] lg:px-[10vw] mt-16"
+      >
+        <div
+          class="bg-gray-900/40 border border-blue-300/5 backdrop-blur-md w-full py-8 p-8 rounded-2xl"
+        >
+          <div class="text-4xl text-center font-bold mb-4">
+            <h1><span class="text-primary">Minha</span> Educação</h1>
+          </div>
+          <div class="flex flex-col mt-8">
+            <a href="https://portal.ifba.edu.br/valenca" target="_blank">
+              <div
+                class="bg-gray-900 border border-blue-300/5 rounded-lg shadow-lg p-4 mb-4 flex gap-8 items-center"
+              >
+                <div
+                  class="bg-white h-32 w-32 rounded-lg flex items-center justify-center"
+                >
+                  <img
+                    src="assets/img/logo-ifba.png"
+                    alt=""
+                    width="160px"
+                    class="pointer-events-none"
+                  />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-blue-700 mb-2">
+                    Tecnólogo em Análise e Desenvolvimento de Sistemas
+                  </h3>
+                  <p class="text-gray-600 mb-2">
+                    Instituto Federal de Educação Ciência e Tecnologia da Bahia -
+                    Campus Valença
+                  </p>
+                  <p class="text-blue-600 text-lg font-bold">
+                    2023 - 2026 | Cursando
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="projects"
+        class="w-full relative flex items-center justify-between px-[5vw] lg:px-[10vw] mt-16"
+      >
+        <div
+          class="bg-gray-900/40 border border-blue-300/5 backdrop-blur-md w-full py-8 p-8 rounded-2xl"
+        >
+          <div class="text-4xl text-center font-bold mb-4">
+            <h1><span class="text-primary">Projetos</span> Realizados</h1>
+          </div>
+          <div class="flex flex-col mt-8">
+            <div
+              class="bg-gray-900 border border-blue-300/5 rounded-lg shadow-lg p-4 mb-4 flex flex-col gap-8 items-center w-full"
+            >
+              <div class="w-full">
+                <div class="w-full h-64">
+                  <iframe
+                    src="https://reservafacil.site/"
+                    frameborder="0"
+                    class="w-full h-64 rounded-lg"
+                  ></iframe>
+                </div>
+                <a href="https://reservafacil.site/" target="_blank">
+                  <h3 class="text-2xl font-bold text-blue-700 mb-2 mt-4">
+                    Projeto Reserva Fácil
+                  </h3>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="experieces"
+        class="w-full relative flex items-center justify-between px-[5vw] lg:px-[10vw] mt-16"
+      >
+        <div
+          class="bg-gray-900/40 border border-blue-300/5 backdrop-blur-md w-full py-8 p-8 rounded-2xl"
+        >
+          <div class="text-4xl text-center font-bold mb-4">
+            <h1><span class="text-primary">Minhas</span> Experiências</h1>
+          </div>
+          <div class="flex flex-col mt-8">
+            <a href="https://realetech.com.br/" target="_blank">
+              <div
+                class="bg-gray-900 border border-blue-300/5 rounded-lg shadow-lg p-4 mb-4 flex gap-8 items-center"
+              >
+                <div
+                  class="bg-white h-32 w-32 rounded-lg flex items-center justify-center"
+                >
+                  <img
+                    src="assets/img/logo-reale.jpg"
+                    alt=""
+                    width="160px"
+                    class="pointer-events-none rounded-lg"
+                  />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-blue-700 mb-2">
+                    Reale Tech - Soluções em Tecnologia da Informação
+                  </h3>
+                  <p class="text-gray-600 mb-2">
+                    Desenvolvedor Full Stack e Suporte Técnico
+                  </p>
+                  <p class="text-blue-600 text-lg font-bold">2023 - Atual</p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -226,9 +406,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16/dist/smooth-scroll.polyfills.min.js"></script>
 
-
     <script src="assets/js/anim.js"></script>
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/data.js"></script>
+    <script src="assets/js/actions.js"></script>
   </body>
 </html>

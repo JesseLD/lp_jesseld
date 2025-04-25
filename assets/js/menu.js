@@ -6,8 +6,8 @@ const observer = new IntersectionObserver((entries) => {
     const id = entry.target.getAttribute("id");
     const link = document.getElementById(`link-${id}`);
 
-    console.log(link);
-    console.log(id)
+    // console.log(link);
+    // console.log(id)
 
     if (entry.isIntersecting) {
       navLinks.forEach(l => l.classList.remove("active"));
@@ -17,8 +17,28 @@ const observer = new IntersectionObserver((entries) => {
 }, {
   threshold: 0.6 // Quanto da seção precisa estar visível (60%)
 });
+const observerMobile = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const id = entry.target.getAttribute("id");
+    const link = document.getElementById(`link-${id}-mb`);
+
+    // console.log(link);
+    // console.log(id)
+
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+    }
+  });
+}, {
+  threshold: 0.1 // Quanto da seção precisa estar visível (60%)
+});
 
 // Observar todas as seções
 sections.forEach(section => {
   observer.observe(section);
+});
+// Mobile
+sections.forEach(section => {
+  observerMobile.observe(section);
 });

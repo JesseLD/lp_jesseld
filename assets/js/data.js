@@ -41,11 +41,17 @@ const skills = [
 function drawItem(SkillItem) {
 
   return `
-     <div class="flex flex-col border border-blue-600/20 bg-blue-600/5 backdrop-blur-80 rounded-lg p-4 items-center justify-center w-32 h-32 hover:scale-105 transition duration-300 ease-in-out cursor-pointer">
+     <div class="flex flex-col bg-gray-900 border border-blue-300/5 backdrop-blur-80 rounded-lg p-4 items-center justify-center w-32 h-32 hover:scale-105 transition duration-300 ease-in-out cursor-pointer">
               <img src="${SkillItem.icon}" alt="" width="80">
               <p class="text-center text-sm font-bold mt-2">${SkillItem.name}</p>
             </div>
   `;
+  // return `
+  //    <div class="flex flex-col border border-blue-600/20 bg-blue-600/5 backdrop-blur-80 rounded-lg p-4 items-center justify-center w-32 h-32 hover:scale-105 transition duration-300 ease-in-out cursor-pointer">
+  //             <img src="${SkillItem.icon}" alt="" width="80">
+  //             <p class="text-center text-sm font-bold mt-2">${SkillItem.name}</p>
+  //           </div>
+  // `;
  }
 
 function populate() {

@@ -72,3 +72,32 @@ body {
   color: #007aff;
   font-weight: bold;
 }
+
+.menu-active {
+  display: flex;
+}
+
+#mobile-btn {
+  transition: transform 0.3s ease-in-out; /* Animação de rotação suave */
+}
+
+.icon-transition {
+  transform: rotate(180deg); /* Rotaciona o ícone ao trocar */
+}
+
+/* Animação do menu (entrando e saindo da tela) */
+#mobile-menu {
+  transform: translateX(100%); /* Inicialmente fora da tela */
+  transition: transform 0.3s ease-in-out; /* Animação suave */
+  /* position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: #fff; */
+}
+
+#mobile-menu.open {
+  transform: translateX(0); /* Menu desliza para dentro */
+} 
