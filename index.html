@@ -1,23 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" href="img/logo_b.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link
       rel="stylesheet"
@@ -25,62 +20,513 @@
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
 
-    <title>Jessé Oliveira | Full Stack Developer</title>
+    <title>Jessé Oliveira | Portfólio</title>
   </head>
-  <body class="bg-default">
-    <div
-      class="w-full h-dvh flex items-center justify-center"
-    >
-  
-  
-    <div class="w-[60vw] flex flex-col items-center">
-
-      <img src="img/jasse_b.png" alt="" class="p-4 w-[300px]" />
-
-      <a
-        href="https://www.instagram.com/jesse.oliveira7/"
-        rel="external"
-        target="_blank"
+  <body class="bg-secondary text-white">
+    <div id="_app" class="flex flex-col relative">
+      <header
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        class="w-full bg-secondary-light h-20 px-[5vw] lg:px-[10vw] flex items-center justify-between fixed z-20"
       >
-        <span class="flex items-center gap-2">
-          <ion-icon name="logo-instagram"></ion-icon>
-          @Jesse.oliveira7
-        </span>
-      </a>
+        <div>
+          <img src="assets/img/logo.png" alt="" class="pointer-events-none" />
+        </div>
+        <nav class="space-x-4 font-bold relative hidden lg:flex">
+          <a
+            href="#home"
+            id="link-home"
+            class="nav-link hover:text-blue-500 transition cursor-pointer"
+            >Home</a
+          >
+          <a
+            href="#about"
+            id="link-about"
+            class="nav-link hover:text-blue-500 transition cursor-pointer"
+            >Sobre</a
+          >
+          <a
+            href="#skills"
+            id="link-skills"
+            class="nav-link hover:text-blue-500 transition cursor-pointer"
+            >Skills</a
+          >
+          <a
+            href="#education"
+            id="link-education"
+            class="nav-link hover:text-blue-500 transition cursor-pointer"
+            >Educação</a
+          >
+          <a
+            href="#projects"
+            id="link-projects"
+            class="nav-link hover:text-blue-500 transition cursor-pointer"
+            >Projetos</a
+          >
+          <a
+            href="#experiences"
+            id="link-experiences"
+            class="nav-link text-primary transition cursor-pointer"
+            >Experiências</a
+          >
+        </nav>
 
-      <a href="https://wa.me/557588287627" rel="external" target="_blank">
-        <button
-          id="contact"
-          class="bg-highlight p-2 px-4 rounded-lg mt-6 text-xl text-default w-full flex justify-center"
+        <!-- <div class="lg:hidden"> -->
+        <ion-icon
+          id="mobile-btn"
+          class="text-4xl text-blue-600 lg:hidden"
+          name="menu-outline"
+        ></ion-icon>
+        <!-- </div> -->
+
+        <div
+          id="mobile-menu"
+          class="lg:hidden absolute top-20 right-0 z-10 w-64 h-screen bg-gray-900/40 border border-blue-300/5 backdrop-blur-md rounded-lg shadow-lg p-4"
         >
-          <span class="flex items-center gap-2 text-black">
-            <ion-icon name="logo-whatsapp" class="text-black"></ion-icon> Fale
-            Comigo
-          </span>
-        </button>
-      </a>
+          <nav class="flex flex-col space-y-4 font-bold">
+            <a
+              href="#home"
+              id="link-home-mb"
+              class="nav-link hover:text-blue-500 transition cursor-pointer"
+              >Home</a
+            >
+            <a
+              href="#about"
+              id="link-about-mb"
+              class="nav-link hover:text-blue-500 transition cursor-pointer"
+              >Sobre</a
+            >
+            <a
+              href="#skills"
+              id="link-skills-mb"
+              class="nav-link hover:text-blue-500 transition cursor-pointer"
+              >Skills</a
+            >
+            <a
+              href="#education"
+              id="link-education-mb"
+              class="nav-link hover:text-blue-500 transition cursor-pointer"
+              >Educação</a
+            >
+            <a
+              href="#projects"
+              id="link-projects-mb"
+              class="nav-link hover:text-blue-500 transition cursor-pointer"
+              >Projetos</a
+            >
+            <a
+              href="#experiences"
+              id="link-experiences-mb"
+              class="nav-link text-primary transition cursor-pointer"
+              >Experiências</a
+            >
+          </nav>
+        </div>
+      </header>
+      <div class="mb-30 lg:mb-0"></div>
 
-      <div class="mt-4 text-xl">
-        <p class="text-center">
-          Construindo Soluções <strong>Inteligentes</strong> para um Mundo
-          <span class="highlight-text">{+Conectado}</span>
-        </p>
-      </div>
+      <section
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        id="home"
+        class="w-full min-h-dvh relative flex flex-col lg:flex-row items-center lg:justify-between gap-16 lg:gap-0 px-[5vw] lg:px-[10vw]"
+      >
+        <div id="tsparticles" class="fixed -z-10"></div>
+        <div
+          class="flex flex-col items-start justify-center bg-gray-900/20 border border-blue-300/5 backdrop-blur-md p-8 rounded-xl lg:min-w-[480px]"
+        >
+          <h1 class="text-4xl font-bold mb-2">Olá eu sou,</h1>
+          <h1 class="text-6xl font-bold mb-4">Jessé Oliveira</h1>
+          <p class="text-xl mb-2 font-semibold">
+            Sou: <span id="typed" class="text-primary"></span>
+          </p>
+          <a
+            href="#sobre"
+            class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition flex items-center font-bold"
+            >Saiba Mais
+            <span
+              class="flex bg-white text-primary w-4 h-4 rounded-full items-center justify-center ml-2"
+            >
+              <ion-icon name="arrow-down-outline"></ion-icon> </span
+          ></a>
+          <div class="text-3xl mt-4">
+            <a href="https://github.com/jesseld" target="_blank">
+              <ion-icon name="logo-github" class="text-primary"></ion-icon>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jesseoliveira10/"
+              target="_blank"
+            >
+              <ion-icon name="logo-linkedin" class="text-primary"></ion-icon>
+            </a>
+            <a
+              href="https://www.instagram.com/jesse.oliveira7/"
+              target="_blank"
+            >
+              <ion-icon name="logo-instagram" class="text-primary"></ion-icon>
+            </a>
+            <a href="wa.me/5575988287627" target="_blank">
+              <ion-icon name="logo-whatsapp" class="text-primary"></ion-icon>
+            </a>
+          </div>
+        </div>
 
-      <div class="mt-4 text-sm">
-        <p id="copy" class="text-neutral-400 text-center"></p>
-      </div>
+        <img
+          src="assets/img/me.png"
+          alt="Imagem de Jessé Oliveira"
+          class="w-70vw lg:w-1/3 h-auto rounded-lg drop-shadow-md drop-shadow-blue-700 pointer-events-none"
+        />
+      </section>
 
+      <div class="mb-20 lg:mb-0"></div>
 
+      <section
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        id="about"
+        class="w-full relative flex items-center justify-between px-[5vw] lg:px-[10vw]"
+      >
+        <div
+          class="bg-gray-900/40 border border-blue-300/5 backdrop-blur-md w-full min-h-dvh p-8 rounded-2xl"
+        >
+          <div class="text-4xl text-center font-bold mb-4">
+            <h1><span class="text-primary">Sobre</span> Mim</h1>
+          </div>
+          <div
+            class="mt-8 lg:mt-24 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16"
+          >
+            <div class="flex items-center justify-center">
+              <img
+                src="assets/img/me_default.png"
+                alt=""
+                class="w-sm h-auto rounded-lg shadow-lg pointer-events-none"
+              />
+            </div>
+            <div>
+              <div class="">
+                <h3 class="font-bold text-3xl mb-2">Quem sou eu?</h3>
+                <p class="text-sm font-bold text-primary mb-4">
+                  Full Stack and Mobile Developer
+                </p>
+                <div class="space-y-4 text-sm">
+                  <p>
+                    Olá! Me chamo Jessé Oliveira e sou um desenvolvedor Full
+                    Stack com atuação também em projetos Mobile e um bom domínio
+                    de ambientes Linux. Tenho paixão por transformar ideias em
+                    soluções funcionais e intuitivas, unindo tecnologia e
+                    criatividade no dia a dia.
+                  </p>
+                  <p>
+                    Minha trajetória na programação começou de um jeito bem
+                    divertido: desenvolvendo plugins e mods para Minecraft
+                    usando Java. Desde então, minha curiosidade só cresceu, e
+                    hoje trabalho com uma stack que inclui
+                    <strong
+                      >React, Tailwind, PHP, MySQL, Node.js, Dart/Flutter,
+                      Python,</strong
+                    >
+                    entre outras tecnologias que me ajudam a dar vida a projetos
+                    completos — tanto no back quanto no front-end.
+                  </p>
+                  <p>
+                    O que mais me motiva é criar algo novo e saber que isso vai
+                    impactar a vida de alguém de forma positiva. Gosto de
+                    desafios, de pensar fora da caixa e, claro, de um bom café
+                    enquanto codifico.
+                  </p>
+                  <p>
+                    Ah, e sim — também sou gamer nas horas vagas e acredito
+                    muito no poder do trabalho em equipe para construir coisas
+                    realmente incríveis.
+                  </p>
+                </div>
+                <div class="mt-4">
+                  <p>
+                    <span class="text-primary font-semibold">Email :</span
+                    ><a
+                      href="mailto:dev.jesseoliveira@gmail.com"
+                      target="_blank"
+                    >
+                      dev.jesseoliveira@gmail.com</a
+                    >
+                  </p>
+                  <p>
+                    <span class="text-primary font-semibold">Onde :</span> Bahia
+                    - Brasil
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-10 flex items-center justify-center">
+            <a href="#" class="bg-primary px-8 py-4 rounded-lg font-bold"
+              >Currículo CV</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        id="skills"
+        class="w-full relative flex items-center justify-between px-[5vw] lg:px-[10vw] mt-16"
+      >
+        <div
+          class="bg-gray-900/40 border border-blue-300/5 backdrop-blur-md w-full min-h-dvh p-8 rounded-2xl"
+        >
+          <div class="text-4xl text-center font-bold mb-4">
+            <h1><span class="text-primary">Skills</span> & Habilidades</h1>
+          </div>
+          <div
+            id="skills-container"
+            class="mt-12 lg:mt-24 grid grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-16 justify-items-center"
+          ></div>
+        </div>
+      </section>
+
+      <section
+      data-aos="fade-up"
+      data-aos-duration="1500"
+        id="education"
+        class="w-full relative flex items-center justify-between px-[5vw] lg:px-[10vw] mt-16"
+      >
+        <div
+          class="bg-gray-900/40 border border-blue-300/5 backdrop-blur-md w-full py-8 p-8 rounded-2xl"
+        >
+          <div class="text-4xl text-center font-bold mb-4">
+            <h1><span class="text-primary">Minha</span> Educação</h1>
+          </div>
+          <div class="flex flex-col mt-8">
+            <a href="https://portal.ifba.edu.br/valenca" target="_blank">
+              <div
+                class="bg-gray-900 border border-blue-300/5 rounded-lg shadow-lg p-4 mb-4 flex flex-col lg:flex-row gap-8 items-center"
+              >
+                <div
+                  class="bg-white h-32 w-32 rounded-lg flex items-center justify-center"
+                >
+                  <img
+                    src="assets/img/logo-ifba.png"
+                    alt=""
+                    width="160px"
+                    class="pointer-events-none"
+                  />
+                </div>
+                <div>
+                  <h3
+                    class="text-2xl font-bold text-blue-700 mb-2 text-center lg:text-left"
+                  >
+                    Tecnólogo em Análise e Desenvolvimento de Sistemas
+                  </h3>
+                  <p class="text-gray-600 mb-2 text-center lg:text-left">
+                    Instituto Federal de Educação Ciência e Tecnologia da Bahia
+                    - Campus Valença
+                  </p>
+                  <p
+                    class="text-blue-600 text-lg font-bold text-center lg:text-left"
+                  >
+                    2023 - 2026 | Cursando
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        id="projects"
+        class="w-full relative flex items-center justify-between px-[5vw] lg:px-[10vw] mt-16"
+      >
+        <div
+          class="bg-gray-900/40 border border-blue-300/5 backdrop-blur-md w-full py-8 p-8 rounded-2xl"
+        >
+          <div class="text-4xl text-center font-bold mb-4">
+            <h1><span class="text-primary">Projetos</span> Realizados</h1>
+          </div>
+          <div class="flex flex-col mt-8">
+            <div
+              class="bg-gray-900 border border-blue-300/5 rounded-lg shadow-lg p-4 mb-4 flex flex-col gap-8 items-center w-full"
+            >
+              <div class="w-full">
+                <div class="w-full h-64">
+                  <iframe
+                    src="https://reservafacil.site/"
+                    frameborder="0"
+                    class="w-full h-64 rounded-lg"
+                  ></iframe>
+                </div>
+                <a href="https://reservafacil.site/" target="_blank">
+                  <h3 class="text-2xl font-bold text-blue-700 mb-2 mt-4">
+                    Projeto Reserva Fácil
+                  </h3>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        id="experiences"
+        class="w-full relative flex items-center justify-between px-[5vw] lg:px-[10vw] mt-16"
+      >
+        <div
+          class="bg-gray-900/40 border border-blue-300/5 backdrop-blur-md w-full py-8 p-8 rounded-2xl"
+        >
+          <div class="text-4xl text-center font-bold mb-4">
+            <h1><span class="text-primary">Minhas</span> Experiências</h1>
+          </div>
+          <div class="flex flex-col mt-8">
+            <a href="https://realetech.com.br/" target="_blank">
+              <div
+                class="bg-gray-900 border border-blue-300/5 rounded-lg shadow-lg p-4 mb-4 flex flex-col lg:flex-row gap-8 items-center"
+              >
+                <div
+                  class="bg-white h-32 w-32 rounded-lg flex items-center justify-center"
+                >
+                  <img
+                    src="assets/img/logo-reale.jpg"
+                    alt=""
+                    width="160px"
+                    class="pointer-events-none rounded-lg"
+                  />
+                </div>
+                <div>
+                  <h3
+                    class="text-2xl font-bold text-blue-700 mb-2 text-center lg:text-left"
+                  >
+                    Reale Tech - Soluções em Tecnologia da Informação
+                  </h3>
+                  <p class="text-gray-600 mb-2 text-center lg:text-left">
+                    Desenvolvedor Full Stack e Suporte Técnico
+                  </p>
+                  <p
+                    class="text-blue-600 text-lg font-bold text-center lg:text-left"
+                  >
+                    2023 - Atual
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        class="mt-10 w-full bg-gray-900/40 border border-blue-300/5 backdrop-blur-md p-8 rounded-2xl px-[5vw] lg:px-[10vw]"
+      >
+        <div class="w-full grid grid-cols-1 lg:grid-cols-3">
+          <div class="text-2xl mt-4 lg:mt-0 text-center lg:text-left">
+            <p class="font-bold">Portfólio Jessé Oliveira</p>
+            <p class="text-lg">Obrigado por visitar</p>
+          </div>
+          <div
+            class="text-sm lg:max-w-[240px] mt-4 lg:mt-0 text-center lg:text-left"
+          >
+            <h2 class="text-xl font-bold">Links Rápidos</h2>
+
+            <nav class="font-bold relative flex flex-col">
+              <a
+                href="#home"
+                id="link-home"
+                class="nav-link hover:text-blue-500 transition cursor-pointer"
+                >Home</a
+              >
+              <a
+                href="#about"
+                id="link-about"
+                class="nav-link hover:text-blue-500 transition cursor-pointer"
+                >Sobre</a
+              >
+              <a
+                href="#skills"
+                id="link-skills"
+                class="nav-link hover:text-blue-500 transition cursor-pointer"
+                >Skills</a
+              >
+              <a
+                href="#education"
+                id="link-education"
+                class="nav-link hover:text-blue-500 transition cursor-pointer"
+                >Educação</a
+              >
+              <a
+                href="#projects"
+                id="link-projects"
+                class="nav-link hover:text-blue-500 transition cursor-pointer"
+                >Projetos</a
+              >
+              <a
+                href="#experiences"
+                id="link-experiences"
+                class="nav-link text-primary transition cursor-pointer"
+                >Experiências</a
+              >
+            </nav>
+          </div>
+          <div class="text-sm mt-4 lg:mt-0 text-center lg:text-left">
+            <h2 class="text-xl font-bold">Contato</h2>
+            <div class="flex flex-col mt-4 text-lg">
+              <p class="font-bold">Jessé Oliveira</p>
+              <p>
+                <ion-icon name="mail" class="text-blue-600"></ion-icon>
+                dev.jesseoliveira@gmail.com
+              </p>
+              <p>
+                <ion-icon
+                  name="navigate-circle"
+                  class="text-blue-600"
+                ></ion-icon>
+                Valença, BA, Brasil
+              </p>
+            </div>
+
+            <div class="text-3xl mt-4">
+              <a href="https://github.com/jesseld" target="_blank">
+                <ion-icon name="logo-github" class="text-primary"></ion-icon>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jesseoliveira10/"
+                target="_blank"
+              >
+                <ion-icon name="logo-linkedin" class="text-primary"></ion-icon>
+              </a>
+              <a
+                href="https://www.instagram.com/jesse.oliveira7/"
+                target="_blank"
+              >
+                <ion-icon name="logo-instagram" class="text-primary"></ion-icon>
+              </a>
+              <a href="wa.me/5575988287627" target="_blank">
+                <ion-icon name="logo-whatsapp" class="text-primary"></ion-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4 border-blue-300/10" />
+
+        <div class="text-center text-sm">
+          <p class="font-bold">
+            2025 - Desenvolvido com 💙 por
+            <span class="text-primary">Jessé Oliveira</span>
+          </p>
+        </div>
+      </footer>
     </div>
-  
-  
-  
-  
-  
-  
-  
-  </div>
+
+    <!-- tsParticles CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script src="assets/js/particle.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -89,7 +535,15 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="js/script.js"></script>
-    <script src="js/init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="assets/js/anim.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/actions.js"></script>
   </body>
 </html>
