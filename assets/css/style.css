@@ -432,6 +432,8 @@ img { max-width: 100%; display: block; }
 .project-full-gradient { position: absolute; inset: 0; }
 .pf-gradient-1 { background: linear-gradient(135deg, #040d1a 0%, #0d2847 40%, #091830 100%); }
 .pf-gradient-2 { background: linear-gradient(135deg, #0a0520 0%, #1a0d3e 40%, #0d0826 100%); }
+.pf-gradient-3 { background: linear-gradient(135deg, #0a1a0d 0%, #0d3a28 40%, #081a12 100%); }
+.pf-gradient-4 { background: linear-gradient(135deg, #1a1005 0%, #3a2508 40%, #1a1005 100%); }
 
 .project-full-num { position: absolute; font-family: var(--font-display); font-size: clamp(6rem, 10vw, 10rem); font-weight: 800; color: rgba(255,255,255,.02); line-height: 1; top: 50%; left: 50%; transform: translate(-50%,-50%); }
 
@@ -452,6 +454,8 @@ img { max-width: 100%; display: block; }
 .project-full-info > p { font-size: .9rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.25rem; }
 .project-full-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.5rem; }
 .project-full-tags span { font-size: .7rem; font-weight: 600; color: var(--primary); background: var(--primary-glow); padding: .3rem .7rem; border-radius: 20px; }
+
+.project-full-links { display: flex; gap: .75rem; flex-wrap: wrap; }
 
 /* ============================================
    EXPERIENCE — V2 rich card
