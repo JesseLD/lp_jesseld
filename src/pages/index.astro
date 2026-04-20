@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import MobileMenu from '../components/MobileMenu.astro';
+import StickyCTA from '../components/StickyCTA.astro';
+import Hero from '../components/Hero.astro';
+import Marquee from '../components/Marquee.astro';
+import About from '../components/About.astro';
+import DividerTech from '../components/DividerTech.astro';
+import Skills from '../components/Skills.astro';
+import DividerWorkspace from '../components/DividerWorkspace.astro';
+import Education from '../components/Education.astro';
+import Projects from '../components/Projects.astro';
+import Experience from '../components/Experience.astro';
+import Footer from '../components/Footer.astro';
+
+const locale = 'pt';
+---
+<BaseLayout locale={locale}>
+  <Navbar locale={locale} />
+  <MobileMenu locale={locale} />
+  <StickyCTA locale={locale} />
+  <main>
+    <Hero locale={locale} />
+    <Marquee locale={locale} />
+    <About locale={locale} />
+    <DividerTech locale={locale} />
+    <Skills locale={locale} />
+    <DividerWorkspace locale={locale} />
+    <Education locale={locale} />
+    <Projects locale={locale} />
+    <Experience locale={locale} />
+    <Footer locale={locale} />
+  </main>
+</BaseLayout>

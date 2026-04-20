@@ -1,0 +1,21 @@
+---
+import { ui, type Locale } from '../data/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = ui[locale];
+const items = [t.marqueeDeveloper, 'FULL STACK', 'MOBILE', 'REACT', 'FLUTTER', 'NODE.JS'];
+const doubled = [...items, ...items];
+---
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    {doubled.map((word) => (
+      <>
+        <span>{word}</span><span class="marquee-dot"></span>
+      </>
+    ))}
+  </div>
+</div>

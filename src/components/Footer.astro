@@ -1,0 +1,66 @@
+---
+import { ui, type Locale } from '../data/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = ui[locale];
+const year = new Date().getFullYear();
+---
+<footer id="contact" class="footer">
+  <div class="footer-hero">
+    <img src="/assets/img/footer-bg.webp" alt="" class="footer-hero-img" loading="lazy" decoding="async" />
+    <div class="footer-hero-overlay"></div>
+    <div class="footer-hero-content">
+      <div class="section-label">{t.footerCtaLabel}</div>
+      <h2 class="footer-cta-title">
+        <span class="heading-line"><span set:html={t.footerCtaHeading[0]}></span></span>
+        <span class="heading-line"><span set:html={t.footerCtaHeading[1]}></span></span>
+      </h2>
+      <a href="mailto:dev.jesseoliveira@gmail.com" class="btn-primary btn-lg">
+        <span>{t.footerCtaBtn}</span>
+        <i data-lucide="send"></i>
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="/assets/img/logo.png" alt="Jessé Oliveira" class="footer-logo" loading="lazy" decoding="async" />
+          <p>{t.footerTagline}</p>
+        </div>
+        <div class="footer-col">
+          <h4>{t.footerNav}</h4>
+          <nav>
+            <a href="#home">{t.home}</a>
+            <a href="#about">{t.about}</a>
+            <a href="#skills">{t.skills}</a>
+            <a href="#projects">{t.projects}</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>{t.footerContact}</h4>
+          <div class="footer-contact-list">
+            <a href="mailto:dev.jesseoliveira@gmail.com"><i data-lucide="mail"></i>dev.jesseoliveira@gmail.com</a>
+            <a href="https://maps.google.com/?q=Valença,BA,Brasil" target="_blank"><i data-lucide="map-pin"></i>{t.aboutLocation}</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>{t.footerSocial}</h4>
+          <div class="footer-social-row">
+            <a href="https://github.com/jesseld" target="_blank"><i data-lucide="github"></i></a>
+            <a href="https://www.linkedin.com/in/jesseoliveira10/" target="_blank"><i data-lucide="linkedin"></i></a>
+            <a href="https://www.instagram.com/jesse.oliveira7/" target="_blank"><i data-lucide="instagram"></i></a>
+            <a href="https://wa.me/5575988287627" target="_blank"><i data-lucide="message-circle"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <p><span id="footer-year">{year}</span> — {t.footerBy} <span class="accent">Jessé Oliveira</span></p>
+      </div>
+    </div>
+  </div>
+</footer>

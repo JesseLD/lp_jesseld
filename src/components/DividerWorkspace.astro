@@ -1,0 +1,19 @@
+---
+import { ui, type Locale } from '../data/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = ui[locale];
+---
+<section class="photo-divider">
+  <img src="/assets/img/divider-workspace.webp" alt="" class="photo-divider-img" loading="lazy" decoding="async" />
+  <div class="photo-divider-overlay"></div>
+  <div class="photo-divider-text">
+    <h2 class="divider-heading">
+      {t.divider2.map((line) => <span class="dh-line" set:html={line}></span>)}
+    </h2>
+  </div>
+</section>

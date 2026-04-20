@@ -1,0 +1,33 @@
+---
+import { ui, localeHref, type Locale } from '../data/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = ui[locale];
+const activeClass = (l: Locale) => l === locale ? 'lang-active' : '';
+---
+<div id="mobile-menu" class="mobile-menu">
+  <nav class="mobile-menu-nav">
+    <a href="#home" class="mobile-link">{t.home}</a>
+    <a href="#about" class="mobile-link">{t.about}</a>
+    <a href="#skills" class="mobile-link">{t.skills}</a>
+    <a href="#education" class="mobile-link">{t.education}</a>
+    <a href="#projects" class="mobile-link">{t.projects}</a>
+    <a href="#experience" class="mobile-link">{t.experience}</a>
+  </nav>
+  <div class="mobile-menu-footer">
+    <div class="mobile-socials">
+      <a href="https://github.com/jesseld" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
+      <a href="https://www.linkedin.com/in/jesseoliveira10/" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+      <a href="https://www.instagram.com/jesse.oliveira7/" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+    </div>
+    <div class="mobile-lang-switch">
+      <a href={localeHref.pt} class={activeClass('pt')} lang="pt">PT</a>
+      <a href={localeHref.en} class={activeClass('en')} lang="en">EN</a>
+      <a href={localeHref.es} class={activeClass('es')} lang="es">ES</a>
+    </div>
+  </div>
+</div>

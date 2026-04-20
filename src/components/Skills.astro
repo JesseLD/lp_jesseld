@@ -1,0 +1,67 @@
+---
+import { ui, type Locale } from '../data/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = ui[locale];
+---
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-label">{t.skillsLabel}</div>
+    <h2 class="section-heading">
+      <span class="heading-line"><span set:html={t.skillsHeading[0]}></span></span>
+      <span class="heading-line"><span set:html={t.skillsHeading[1]}></span></span>
+    </h2>
+
+    <div class="skills-categories">
+
+      <div class="skill-category" data-color="blue">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon"><i data-lucide="layout"></i></div>
+          <div>
+            <h3>Frontend</h3>
+            <p>{t.skillFrontendDesc}</p>
+          </div>
+        </div>
+        <div class="skill-cat-grid" id="skills-frontend"></div>
+      </div>
+
+      <div class="skill-category" data-color="green">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon"><i data-lucide="server"></i></div>
+          <div>
+            <h3>Backend</h3>
+            <p>{t.skillBackendDesc}</p>
+          </div>
+        </div>
+        <div class="skill-cat-grid" id="skills-backend"></div>
+      </div>
+
+      <div class="skill-category" data-color="purple">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon"><i data-lucide="smartphone"></i></div>
+          <div>
+            <h3>Mobile</h3>
+            <p>{t.skillMobileDesc}</p>
+          </div>
+        </div>
+        <div class="skill-cat-grid" id="skills-mobile"></div>
+      </div>
+
+      <div class="skill-category" data-color="orange">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon"><i data-lucide="wrench"></i></div>
+          <div>
+            <h3>{t.skillCats.tools.title}</h3>
+            <p>{t.skillCats.tools.desc}</p>
+          </div>
+        </div>
+        <div class="skill-cat-grid" id="skills-tools"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
