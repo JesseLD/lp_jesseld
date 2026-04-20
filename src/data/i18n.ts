@@ -125,7 +125,7 @@ const pt: UI = {
   aboutStat: ['Anos exp.', 'Tecnologias', 'Projetos'],
   aboutRole: 'Full Stack & Mobile Developer',
   aboutParagraphs: [
-    'Sou Jessé, dev em Valença/BA. {{yearsPhrase}} faço Full Stack na Reale Tech — mas código, pra mim, começou com mods de Minecraft em Java pra jogar com os amigos no servidor.',
+    'Sou Jessé, dev em Valença/BA. {{yearsPhrase}} faço Full Stack na Reale Tech. Toda vez que alguém me traz um problema, o que me ganha é aquele "não sei, mas vou descobrir" — é isso que me faz continuar. A ferramenta mudou ao longo dos anos; essa curiosidade, não.',
     'A stack hoje é <strong>React, Tailwind, PHP, MySQL, Node.js, Dart/Flutter, Python</strong> — o que o projeto pedir. Se tem Linux no meio, melhor ainda.',
     'Gosto mais do momento em que o sistema sai do papel e alguém de verdade usa — mesmo que seja pra reclamar. Prefiro projeto com restrição clara a liberdade total. E se você acha café uma personalidade, a gente provavelmente se entende.',
   ],
@@ -221,7 +221,7 @@ const en: UI = {
   aboutStat: ['Years exp.', 'Technologies', 'Projects'],
   aboutRole: 'Full Stack & Mobile Developer',
   aboutParagraphs: [
-    "I'm Jessé, a dev based in Valença, Brazil. {{yearsPhrase}} Full Stack at Reale Tech — but for me, code started with Minecraft mods in Java, so I could play with friends on the server.",
+    "I'm Jessé, a dev based in Valença, Brazil. {{yearsPhrase}} Full Stack at Reale Tech. Every time someone brings me a problem, what gets me is that \"I don't know yet, but I'll figure it out\" — that's what keeps me going. The tools have changed over the years; that curiosity hasn't.",
     'Today the stack is <strong>React, Tailwind, PHP, MySQL, Node.js, Dart/Flutter, Python</strong> — whatever the project needs. Bonus points if Linux is in the mix.',
     "What I like most is the moment a system leaves the doc and someone actually uses it — even if only to complain. I'd rather work with a clear constraint than total freedom. And if you consider coffee a personality trait, we'll probably get along.",
   ],
@@ -317,7 +317,7 @@ const es: UI = {
   aboutStat: ['Años exp.', 'Tecnologías', 'Proyectos'],
   aboutRole: 'Full Stack & Mobile Developer',
   aboutParagraphs: [
-    'Soy Jessé, dev en Valença/BA, Brasil. {{yearsPhrase}} que hago Full Stack en Reale Tech — pero para mí, el código empezó con mods de Minecraft en Java, para jugar con los amigos en el servidor.',
+    'Soy Jessé, dev en Valença/BA, Brasil. {{yearsPhrase}} que hago Full Stack en Reale Tech. Cada vez que alguien me trae un problema, lo que me gana es ese "todavía no lo sé, pero voy a descubrirlo" — es eso lo que me mantiene andando. Las herramientas cambiaron con los años; esa curiosidad, no.',
     'El stack hoy es <strong>React, Tailwind, PHP, MySQL, Node.js, Dart/Flutter, Python</strong> — lo que pida el proyecto. Y si hay Linux de por medio, mejor todavía.',
     'Lo que más disfruto es el momento en que el sistema sale del documento y alguien lo usa de verdad — aunque sea para quejarse. Prefiero trabajar con una restricción clara que con libertad total. Y si para vos el café cuenta como personalidad, probablemente nos vamos a entender.',
   ],
