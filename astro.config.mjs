@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://jesseld.com.br',
+  site: 'https://www.jesseoliveira.com.br',
   build: {
     format: 'directory',
   },
