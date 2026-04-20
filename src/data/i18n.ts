@@ -2,6 +2,26 @@ export type Locale = 'pt' | 'en' | 'es';
 
 export const locales: Locale[] = ['pt', 'en', 'es'];
 
+// Ano em que comecei como dev Full Stack na Reale Tech.
+// A partir daqui o "Há X anos" do about é calculado dinamicamente em build.
+const REALE_START_YEAR = 2023;
+
+export function yearsOfExperience(now = new Date()): number {
+  return Math.max(1, now.getFullYear() - REALE_START_YEAR);
+}
+
+export function yearsPhrase(locale: Locale, now = new Date()): string {
+  const years = yearsOfExperience(now);
+  if (locale === 'pt') {
+    return years === 1 ? 'Há 1 ano' : `Há ${years} anos`;
+  }
+  if (locale === 'en') {
+    return years === 1 ? '1 year' : `${years} years`;
+  }
+  // es
+  return years === 1 ? 'Hace 1 año' : `Hace ${years} años`;
+}
+
 export const cvPath: Record<Locale, string> = {
   pt: '/assets/static/Curriculo_Jesse_Oliveira_PT.pdf',
   en: '/assets/static/Resume_Jesse_Oliveira_EN.pdf',
@@ -92,7 +112,7 @@ const pt: UI = {
   contact: 'Contato',
   cvLabel: 'Currículo',
   explore: 'Explorar',
-  heroSub: 'Web, mobile e Linux — codando desde mods de Minecraft em Java.',
+  heroSub: 'Web, mobile e Linux — codando desde 2023.',
   marqueeDeveloper: 'DESENVOLVEDOR',
   home: 'Home',
   about: 'Sobre',
@@ -105,7 +125,7 @@ const pt: UI = {
   aboutStat: ['Anos exp.', 'Tecnologias', 'Projetos'],
   aboutRole: 'Full Stack & Mobile Developer',
   aboutParagraphs: [
-    'Sou Jessé, dev em Valença/BA. Há 3 anos faço Full Stack na Reale Tech — mas código, pra mim, começou com mods de Minecraft em Java pra jogar com os amigos no servidor.',
+    'Sou Jessé, dev em Valença/BA. {{yearsPhrase}} faço Full Stack na Reale Tech — mas código, pra mim, começou com mods de Minecraft em Java pra jogar com os amigos no servidor.',
     'A stack hoje é <strong>React, Tailwind, PHP, MySQL, Node.js, Dart/Flutter, Python</strong> — o que o projeto pedir. Se tem Linux no meio, melhor ainda.',
     'Gosto mais do momento em que o sistema sai do papel e alguém de verdade usa — mesmo que seja pra reclamar. Prefiro projeto com restrição clara a liberdade total. E se você acha café uma personalidade, a gente provavelmente se entende.',
   ],
@@ -188,7 +208,7 @@ const en: UI = {
   contact: 'Contact',
   cvLabel: 'Resume',
   explore: 'Explore',
-  heroSub: 'Web, mobile, and Linux — coding since Minecraft mods in Java.',
+  heroSub: 'Web, mobile, and Linux — coding since 2023.',
   marqueeDeveloper: 'DEVELOPER',
   home: 'Home',
   about: 'About',
@@ -201,7 +221,7 @@ const en: UI = {
   aboutStat: ['Years exp.', 'Technologies', 'Projects'],
   aboutRole: 'Full Stack & Mobile Developer',
   aboutParagraphs: [
-    "I'm Jessé, a dev based in Valença, Brazil. 3 years Full Stack at Reale Tech — but for me, code started with Minecraft mods in Java, so I could play with friends on the server.",
+    "I'm Jessé, a dev based in Valença, Brazil. {{yearsPhrase}} Full Stack at Reale Tech — but for me, code started with Minecraft mods in Java, so I could play with friends on the server.",
     'Today the stack is <strong>React, Tailwind, PHP, MySQL, Node.js, Dart/Flutter, Python</strong> — whatever the project needs. Bonus points if Linux is in the mix.',
     "What I like most is the moment a system leaves the doc and someone actually uses it — even if only to complain. I'd rather work with a clear constraint than total freedom. And if you consider coffee a personality trait, we'll probably get along.",
   ],
@@ -284,7 +304,7 @@ const es: UI = {
   contact: 'Contacto',
   cvLabel: 'Currículum',
   explore: 'Explorar',
-  heroSub: 'Web, mobile y Linux — programando desde un mod de Minecraft en Java.',
+  heroSub: 'Web, mobile y Linux — programando desde 2023.',
   marqueeDeveloper: 'DESARROLLADOR',
   home: 'Inicio',
   about: 'Sobre mí',
@@ -297,7 +317,7 @@ const es: UI = {
   aboutStat: ['Años exp.', 'Tecnologías', 'Proyectos'],
   aboutRole: 'Full Stack & Mobile Developer',
   aboutParagraphs: [
-    'Soy Jessé, dev en Valença/BA, Brasil. Hace 3 años que hago Full Stack en Reale Tech — pero para mí, el código empezó con mods de Minecraft en Java, para jugar con los amigos en el servidor.',
+    'Soy Jessé, dev en Valença/BA, Brasil. {{yearsPhrase}} que hago Full Stack en Reale Tech — pero para mí, el código empezó con mods de Minecraft en Java, para jugar con los amigos en el servidor.',
     'El stack hoy es <strong>React, Tailwind, PHP, MySQL, Node.js, Dart/Flutter, Python</strong> — lo que pida el proyecto. Y si hay Linux de por medio, mejor todavía.',
     'Lo que más disfruto es el momento en que el sistema sale del documento y alguien lo usa de verdad — aunque sea para quejarse. Prefiero trabajar con una restricción clara que con libertad total. Y si para vos el café cuenta como personalidad, probablemente nos vamos a entender.',
   ],
