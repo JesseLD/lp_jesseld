@@ -1,0 +1,40 @@
+# Jessé Oliveira — Full Stack & Mobile Developer
+
+> Portfolio pessoal de Jessé Oliveira, desenvolvedor Full Stack e Mobile baseado em Valença/BA, Brasil. Atuação com React, Tailwind, PHP/Laravel, MySQL, Node.js, Flutter/Dart e Python.
+
+## Idiomas disponíveis
+
+- [Português (padrão)](index.html)
+- [English](en/index.html)
+- [Español](es/index.html)
+
+## Perfil
+
+- **Nome:** Jessé Oliveira
+- **Localização:** Valença, BA — Brasil
+- **Atuação:** Desenvolvimento Full Stack, Mobile e ambientes Linux
+- **Formação:** Tecnólogo em Análise e Desenvolvimento de Sistemas — IFBA Campus Valença (2023–2026, em curso)
+- **Emprego atual:** Desenvolvedor Full Stack na Reale Tech (desde 2023)
+
+## Stack
+
+- **Frontend:** React, Tailwind CSS, HTML, CSS, JavaScript
+- **Backend:** PHP, Laravel, Node.js, Python, MySQL
+- **Mobile:** Flutter, Dart
+- **DevOps & Tools:** Linux, Git
+
+## Projetos em destaque
+
+- [Tapuia](https://tapuia.com.br/) — Software de gestão da Tarifa Pública Unificada de Inteligência Administrativa da Prefeitura de Valença/BA. Stack: Laravel, React.
+- [Melhores do Ano Valença](https://www.melhoresdoanovalenca.com.br/) — Plataforma web e app mobile para votação do Prêmio Melhores do Ano. Stack: HTML, Flutter, PHP, MySQL.
+- [Natal Iluminado Valença](https://nataliluminadovalenca.com.br/) — Plataforma de votação online para concurso de decoração natalina. Stack: Laravel.
+- Sistema EBD — Aplicativo mobile para gestão de Escolas Bíblicas Dominicais. Stack: Flutter, PHP, MySQL. [Google Play](https://play.google.com/store/apps/details?id=addixprosisebd.sistemaebdrealetech&hl=pt_BR)
+- [Portfolio Nivatto](https://portfolio.nivatto.com.br) — Portfolio interativo com 4 aplicações web (dashboard financeiro, kanban, e-commerce, landing SaaS). Stack: React, Tailwind, Recharts, dnd-kit. [GitHub](https://github.com/NivattoBr/portfolio)
+
+## Contato
+
+- **Email:** dev.jesseoliveira@gmail.com
+- **GitHub:** https://github.com/jesseld
+- **LinkedIn:** https://www.linkedin.com/in/jesseoliveira10/
+- **Instagram:** https://www.instagram.com/jesse.oliveira7/
+- **WhatsApp:** https://wa.me/5575988287627
