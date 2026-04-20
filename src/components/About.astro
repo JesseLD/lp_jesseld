@@ -1,0 +1,47 @@
+---
+import { ui, type Locale } from '../data/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = ui[locale];
+---
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-label">{t.aboutLabel}</div>
+    <h2 class="section-heading">
+      <span class="heading-line"><span>{t.aboutHeading[0]}</span></span>
+      <span class="heading-line"><span set:html={t.aboutHeading[1]}></span></span>
+    </h2>
+    <div class="about-grid">
+      <div class="about-img-col">
+        <div class="about-img-wrap">
+          <img src="/assets/img/about-photo.webp" alt="Jessé Oliveira" loading="lazy" decoding="async"
+               onerror="this.src='/assets/img/me_default.png'" />
+        </div>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-plus">+</span><span class="stat-txt">{t.aboutStat[0]}</span></div>
+          <div class="stat"><span class="stat-num" data-count="18">0</span><span class="stat-plus">+</span><span class="stat-txt">{t.aboutStat[1]}</span></div>
+          <div class="stat"><span class="stat-num" data-count="10">0</span><span class="stat-plus">+</span><span class="stat-txt">{t.aboutStat[2]}</span></div>
+        </div>
+      </div>
+      <div class="about-txt-col">
+        <div class="about-card">
+          <div class="about-card-top">
+            <i data-lucide="user"></i>
+            <h3>{t.aboutRole}</h3>
+          </div>
+          <div class="about-body">
+            {t.aboutParagraphs.map((p) => <p set:html={p}></p>)}
+          </div>
+          <div class="about-contact">
+            <a href="mailto:dev.jesseoliveira@gmail.com"><i data-lucide="mail"></i><span>dev.jesseoliveira@gmail.com</span></a>
+            <a href="https://maps.google.com/?q=Valença,BA,Brasil" target="_blank"><i data-lucide="map-pin"></i><span>{t.aboutLocation}</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

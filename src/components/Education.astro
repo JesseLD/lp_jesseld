@@ -1,0 +1,51 @@
+---
+import { ui, type Locale } from '../data/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = ui[locale];
+---
+<section id="education" class="section">
+  <div class="container">
+    <div class="section-label">{t.educationLabel}</div>
+    <h2 class="section-heading">
+      <span class="heading-line"><span set:html={t.educationHeading[0]}></span></span>
+      <span class="heading-line"><span set:html={t.educationHeading[1]}></span></span>
+    </h2>
+    <div class="edu-roadmap">
+      <div class="edu-card edu-card-main">
+        <div class="edu-card-glow"></div>
+        <div class="edu-card-inner">
+          <div class="edu-card-badge">
+            <i data-lucide="graduation-cap"></i>
+            <span>{t.educationBadge}</span>
+          </div>
+          <div class="edu-card-logo">
+            <img src="/assets/img/logo-ifba.png" alt="IFBA" loading="lazy" decoding="async" />
+          </div>
+          <h3>{t.educationTitle}</h3>
+          <p class="edu-inst">{t.educationInst}</p>
+          <p class="edu-campus"><i data-lucide="map-pin"></i> {t.educationCampus}</p>
+          <div class="edu-timeline-bar">
+            <div class="edu-bar-track">
+              <div class="edu-bar-fill" data-progress="80"></div>
+            </div>
+            <div class="edu-bar-labels">
+              <span>2023</span>
+              <span class="edu-bar-current">{t.educationNow}</span>
+              <span>2026</span>
+            </div>
+          </div>
+          <div class="edu-highlights">
+            <div class="edu-hl"><i data-lucide="code-2"></i><span>{t.educationHighlights[0]}</span></div>
+            <div class="edu-hl"><i data-lucide="database"></i><span>{t.educationHighlights[1]}</span></div>
+            <div class="edu-hl"><i data-lucide="shield"></i><span>{t.educationHighlights[2]}</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

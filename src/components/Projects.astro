@@ -1,0 +1,184 @@
+---
+import { ui, type Locale } from '../data/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = ui[locale];
+const p = t.projectList;
+---
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-label">{t.projectsLabel}</div>
+    <h2 class="section-heading">
+      <span class="heading-line"><span set:html={t.projectsHeading[0]}></span></span>
+      <span class="heading-line"><span set:html={t.projectsHeading[1]}></span></span>
+    </h2>
+  </div>
+
+  <!-- Project 1 — Tapuia -->
+  <div class="project-showcase">
+    <div class="container">
+      <div class="project-full">
+        <div class="project-full-visual">
+          <div class="project-full-gradient pf-gradient-1"></div>
+          <div class="project-full-num">01</div>
+          <div class="project-full-icon"><i data-lucide="ship"></i></div>
+          <div class="project-full-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+          </div>
+        </div>
+        <div class="project-full-info">
+          <span class="project-full-type">{p.tapuia.type}</span>
+          <h3>{p.tapuia.title}</h3>
+          <p>{p.tapuia.desc}</p>
+          <div class="project-full-tags">
+            <span>Laravel</span><span>React</span>
+          </div>
+          <div class="project-full-links">
+            <a href="https://tapuia.com.br/" target="_blank" class="btn-primary">
+              <span>{p.tapuia.link1}</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+            <a href="https://app.tapuia.com.br/login" target="_blank" class="btn-glass">
+              <span>{p.tapuia.link2}</span>
+              <i data-lucide="lock"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 2 — Melhores do Ano (reversed) -->
+  <div class="project-showcase">
+    <div class="container">
+      <div class="project-full project-full-reverse">
+        <div class="project-full-visual">
+          <div class="project-full-gradient pf-gradient-2"></div>
+          <div class="project-full-num">02</div>
+          <div class="project-full-icon"><i data-lucide="trophy"></i></div>
+          <div class="project-full-orbs">
+            <div class="orb orb-3"></div>
+            <div class="orb orb-4"></div>
+          </div>
+        </div>
+        <div class="project-full-info">
+          <span class="project-full-type">{p.mda.type}</span>
+          <h3>{p.mda.title}</h3>
+          <p>{p.mda.desc}</p>
+          <div class="project-full-tags">
+            <span>HTML</span><span>Flutter</span><span>PHP</span><span>MySQL</span>
+          </div>
+          <div class="project-full-links">
+            <a href="https://www.melhoresdoanovalenca.com.br/" target="_blank" class="btn-primary">
+              <span>{p.mda.link1}</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=br.com.realetech.melhoresdoano_app&hl=pt_BR" target="_blank" class="btn-glass">
+              <span>Google Play</span>
+              <i data-lucide="smartphone"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 3 — Natal Iluminado -->
+  <div class="project-showcase">
+    <div class="container">
+      <div class="project-full">
+        <div class="project-full-visual">
+          <div class="project-full-gradient pf-gradient-3"></div>
+          <div class="project-full-num">03</div>
+          <div class="project-full-icon"><i data-lucide="sparkles"></i></div>
+          <div class="project-full-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-4"></div>
+          </div>
+        </div>
+        <div class="project-full-info">
+          <span class="project-full-type">{p.natal.type}</span>
+          <h3>{p.natal.title}</h3>
+          <p>{p.natal.desc}</p>
+          <div class="project-full-tags">
+            <span>Laravel</span>
+          </div>
+          <a href="https://nataliluminadovalenca.com.br/" target="_blank" class="btn-primary">
+            <span>{p.natal.link}</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 4 — Sistema EBD (reversed) -->
+  <div class="project-showcase">
+    <div class="container">
+      <div class="project-full project-full-reverse">
+        <div class="project-full-visual">
+          <div class="project-full-gradient pf-gradient-4"></div>
+          <div class="project-full-num">04</div>
+          <div class="project-full-icon"><i data-lucide="book-open"></i></div>
+          <div class="project-full-orbs">
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+          </div>
+        </div>
+        <div class="project-full-info">
+          <span class="project-full-type">{p.ebd.type}</span>
+          <h3>{p.ebd.title}</h3>
+          <p>{p.ebd.desc}</p>
+          <div class="project-full-tags">
+            <span>Flutter</span><span>PHP</span><span>MySQL</span>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=addixprosisebd.sistemaebdrealetech&hl=pt_BR" target="_blank" class="btn-primary">
+            <span>Google Play</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 5 — Portfolio Nivatto -->
+  <div class="project-showcase">
+    <div class="container">
+      <div class="project-full">
+        <div class="project-full-visual">
+          <div class="project-full-gradient pf-gradient-1"></div>
+          <div class="project-full-num">05</div>
+          <div class="project-full-icon"><i data-lucide="layout-dashboard"></i></div>
+          <div class="project-full-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+          </div>
+        </div>
+        <div class="project-full-info">
+          <span class="project-full-type">{p.nivatto.type}</span>
+          <h3>{p.nivatto.title}</h3>
+          <p>{p.nivatto.desc}</p>
+          <div class="project-full-tags">
+            <span>React</span><span>Tailwind</span><span>Recharts</span><span>dnd-kit</span>
+          </div>
+          <div class="project-full-links">
+            <a href="https://portfolio.nivatto.com.br" target="_blank" class="btn-primary">
+              <span>{p.nivatto.link}</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+            <a href="https://github.com/NivattoBr/portfolio" target="_blank" class="btn-glass">
+              <span>GitHub</span>
+              <i data-lucide="github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

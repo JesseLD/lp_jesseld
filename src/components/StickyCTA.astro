@@ -1,0 +1,16 @@
+---
+import { ui, type Locale } from '../data/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = ui[locale];
+---
+<div id="sticky-cta" class="sticky-cta">
+  <a href="mailto:dev.jesseoliveira@gmail.com" class="sticky-cta-btn">
+    <i data-lucide="send"></i>
+    <span>{t.contact}</span>
+  </a>
+</div>

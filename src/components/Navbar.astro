@@ -1,0 +1,36 @@
+---
+import { ui, localeHref, type Locale } from '../data/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = ui[locale];
+const activeClass = (l: Locale) => l === locale ? 'lang-active' : '';
+---
+<header id="navbar" class="navbar">
+  <div class="navbar-inner">
+    <a href="#home" class="navbar-logo">
+      <img src="/assets/img/logo.png" alt="Jessé Oliveira" />
+    </a>
+    <nav class="navbar-links">
+      <a href="#home" class="nav-link active" data-section="home">{t.home}</a>
+      <a href="#about" class="nav-link" data-section="about">{t.about}</a>
+      <a href="#skills" class="nav-link" data-section="skills">{t.skills}</a>
+      <a href="#education" class="nav-link" data-section="education">{t.education}</a>
+      <a href="#projects" class="nav-link" data-section="projects">{t.projects}</a>
+      <a href="#experience" class="nav-link" data-section="experience">{t.experience}</a>
+    </nav>
+    <div class="lang-switch">
+      <a href={localeHref.pt} class={activeClass('pt')} lang="pt">PT</a>
+      <a href={localeHref.en} class={activeClass('en')} lang="en">EN</a>
+      <a href={localeHref.es} class={activeClass('es')} lang="es">ES</a>
+    </div>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Menu">
+      <span class="menu-line menu-line-1"></span>
+      <span class="menu-line menu-line-2"></span>
+      <span class="menu-line menu-line-3"></span>
+    </button>
+  </div>
+</header>

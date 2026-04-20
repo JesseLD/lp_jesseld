@@ -1,0 +1,52 @@
+---
+import { ui, type Locale } from '../data/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = ui[locale];
+---
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-label">{t.experienceLabel}</div>
+    <h2 class="section-heading">
+      <span class="heading-line"><span set:html={t.experienceHeading[0]}></span></span>
+      <span class="heading-line"><span set:html={t.experienceHeading[1]}></span></span>
+    </h2>
+    <div class="exp-showcase">
+      <div class="exp-card-v2">
+        <div class="exp-v2-left">
+          <div class="exp-v2-logo">
+            <img src="/assets/img/logo-reale.jpg" alt="Reale Tech" loading="lazy" decoding="async" />
+          </div>
+          <div class="exp-v2-timeline">
+            <div class="exp-v2-dot exp-v2-dot-start"></div>
+            <div class="exp-v2-line"></div>
+            <div class="exp-v2-dot exp-v2-dot-now"></div>
+          </div>
+          <div class="exp-v2-dates">
+            <span>2023</span>
+            <span class="exp-v2-now">{t.experiencePresent}</span>
+          </div>
+        </div>
+        <div class="exp-v2-right">
+          <div class="exp-v2-badge"><i data-lucide="briefcase"></i> {t.experienceBadge}</div>
+          <h3>{t.experienceRole}</h3>
+          <a href="https://realetech.com.br/" target="_blank" class="exp-v2-company">
+            {t.experienceCompany}
+            <i data-lucide="external-link"></i>
+          </a>
+          <p>{t.experienceDesc}</p>
+          <div class="exp-v2-skills">
+            <div class="exp-v2-skill"><i data-lucide="code-2"></i><span>{t.experienceSkills[0]}</span></div>
+            <div class="exp-v2-skill"><i data-lucide="smartphone"></i><span>{t.experienceSkills[1]}</span></div>
+            <div class="exp-v2-skill"><i data-lucide="database"></i><span>{t.experienceSkills[2]}</span></div>
+            <div class="exp-v2-skill"><i data-lucide="git-branch"></i><span>{t.experienceSkills[3]}</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

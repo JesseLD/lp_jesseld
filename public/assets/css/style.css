@@ -497,3 +497,17 @@ img { max-width: 100%; display: block; }
 @media (max-width: 480px) { .exp-v2-skills { grid-template-columns: 1fr; } }
 .exp-v2-skill { display: flex; align-items: center; gap: .5rem; font-size: .8rem; color: var(--text-muted); padding: .5rem .75rem; background: rgba(255,255,255,.02); border-radius: 8px; border: 1px solid var(--border); }
 .exp-v2-skill svg { width: 14px; height: 14px; color: var(--primary); flex-shrink: 0; }
+
+/* ============================================
+   LANGUAGE SWITCHER
+   ============================================ */
+.lang-switch { display: flex; gap: .25rem; align-items: center; }
+.lang-switch a { font-family: var(--font-display); font-size: .72rem; font-weight: 700; letter-spacing: .08em; color: var(--text-dim); padding: .3rem .5rem; border-radius: 6px; transition: color .3s, background .3s; }
+.lang-switch a:hover { color: var(--text); }
+.lang-switch a.lang-active { color: var(--primary); }
+@media (max-width: 768px) { .navbar .lang-switch { display: none; } }
+
+.mobile-lang-switch { display: flex; gap: .5rem; margin-top: 1.5rem; justify-content: center; }
+.mobile-lang-switch a { font-family: var(--font-display); font-size: .9rem; font-weight: 700; letter-spacing: .05em; color: var(--text-muted); padding: .5rem 1rem; border: 1px solid var(--border); border-radius: 8px; transition: color .3s, border-color .3s; }
+.mobile-lang-switch a:hover { color: var(--text); }
+.mobile-lang-switch a.lang-active { color: var(--primary); border-color: var(--primary); }

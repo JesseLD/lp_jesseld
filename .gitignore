@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Astro
+dist/
+.astro/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+
+# Vercel
+.vercel
+
+# Legacy backup (pre-Astro) — can delete when confident
+.legacy/

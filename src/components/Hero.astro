@@ -1,0 +1,50 @@
+---
+import { ui, cvPath, type Locale } from '../data/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = ui[locale];
+---
+<section id="home" class="hero">
+  <div class="hero-bg">
+    <img src="/assets/img/hero-bg.webp" alt="" class="hero-bg-img" />
+    <div class="hero-bg-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span class="hero-tag-line"></span>
+      <span>FULL STACK &amp; MOBILE DEVELOPER</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="hero-title-line"><span class="hero-title-word">Jessé</span></span>
+      <span class="hero-title-line"><span class="hero-title-word">Oliveira<span class="accent">.</span></span></span>
+    </h1>
+    <div class="hero-typed">
+      <span id="typed"></span>
+    </div>
+    <p class="hero-sub">{t.heroSub}</p>
+    <div class="hero-buttons">
+      <a href="#about" class="btn-primary">
+        <span>{t.explore}</span>
+        <i data-lucide="chevron-down"></i>
+      </a>
+      <a href={cvPath[locale]} target="_blank" class="btn-glass">
+        <i data-lucide="download"></i>
+        <span>{t.cvLabel}</span>
+      </a>
+    </div>
+    <div class="hero-socials">
+      <a href="https://github.com/jesseld" target="_blank" class="social-icon"><i data-lucide="github"></i></a>
+      <a href="https://www.linkedin.com/in/jesseoliveira10/" target="_blank" class="social-icon"><i data-lucide="linkedin"></i></a>
+      <a href="https://www.instagram.com/jesse.oliveira7/" target="_blank" class="social-icon"><i data-lucide="instagram"></i></a>
+      <a href="https://wa.me/5575988287627" target="_blank" class="social-icon"><i data-lucide="message-circle"></i></a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span>SCROLL</span>
+  </div>
+</section>
