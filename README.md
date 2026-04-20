@@ -4,7 +4,7 @@ Portfólio pessoal de **Jessé Oliveira** — Full Stack & Mobile Developer.
 
 Landing page multilíngue (PT/EN/ES) construída em [Astro](https://astro.build/) com foco em apresentação cinematográfica: loader, cursor customizado, animações GSAP/ScrollTrigger, efeito typed e skills categorizadas.
 
-🔗 **Live:** [jesseld.com.br](https://jesseld.com.br)
+🔗 **Live:** [jesseoliveira.com.br](https://www.jesseoliveira.com.br)
 
 ## Idiomas
 
