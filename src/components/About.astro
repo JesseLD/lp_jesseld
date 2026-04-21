@@ -1,5 +1,5 @@
 ---
-import { ui, type Locale } from '../data/i18n';
+import { ui, yearsPhrase, yearsOfExperience, type Locale } from '../data/i18n';
 
 interface Props {
   locale: Locale;
@@ -7,6 +7,9 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = ui[locale];
+const phrase = yearsPhrase(locale);
+const years = yearsOfExperience();
+const paragraphs = t.aboutParagraphs.map((p) => p.replace('{{yearsPhrase}}', phrase));
 ---
 <section id="about" class="section">
   <div class="container">
@@ -22,7 +25,7 @@ const t = ui[locale];
                onerror="this.src='/assets/img/me_default.png'" />
         </div>
         <div class="about-stats">
-          <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-plus">+</span><span class="stat-txt">{t.aboutStat[0]}</span></div>
+          <div class="stat"><span class="stat-num" data-count={years}>0</span><span class="stat-plus">+</span><span class="stat-txt">{t.aboutStat[0]}</span></div>
           <div class="stat"><span class="stat-num" data-count="18">0</span><span class="stat-plus">+</span><span class="stat-txt">{t.aboutStat[1]}</span></div>
           <div class="stat"><span class="stat-num" data-count="10">0</span><span class="stat-plus">+</span><span class="stat-txt">{t.aboutStat[2]}</span></div>
         </div>
@@ -34,7 +37,7 @@ const t = ui[locale];
             <h3>{t.aboutRole}</h3>
           </div>
           <div class="about-body">
-            {t.aboutParagraphs.map((p) => <p set:html={p}></p>)}
+            {paragraphs.map((p) => <p set:html={p}></p>)}
           </div>
           <div class="about-contact">
             <a href="mailto:dev.jesseoliveira@gmail.com"><i data-lucide="mail"></i><span>dev.jesseoliveira@gmail.com</span></a>
