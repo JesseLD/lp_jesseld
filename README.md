@@ -1,86 +1,36 @@
-# lp_jesseld
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Portfólio pessoal de **Jessé Oliveira** — Full Stack & Mobile Developer.
+## Getting Started
 
-Landing page multilíngue (PT/EN/ES) construída em [Astro](https://astro.build/) com foco em apresentação cinematográfica: loader, cursor customizado, animações GSAP/ScrollTrigger, efeito typed e skills categorizadas.
-
-🔗 **Live:** [jesseoliveira.com.br](https://www.jesseoliveira.com.br)
-
-## Idiomas
-
-- 🇧🇷 Português — `/`
-- 🇺🇸 English — `/en/`
-- 🇪🇸 Español — `/es/`
-
-## Stack
-
-- [Astro 5](https://astro.build/) — static site generator
-- CSS vanilla customizado (`public/assets/css/style.css`)
-- JavaScript vanilla (`public/assets/js/`)
-- [GSAP](https://gsap.com/) + ScrollTrigger — animações de scroll
-- [Typed.js](https://github.com/mattboldt/typed.js/) — efeito de digitação
-- [Lucide](https://lucide.dev/) + [Devicon](https://devicon.dev/) — ícones
-- Fontes: Bricolage Grotesque, DM Sans, Instrument Serif (Google Fonts)
-
-## Estrutura
-
-```
-.
-├── public/                         # servido em /
-│   ├── assets/{css,js,img,static}  # CSS, JS, imagens e PDFs (inalteráveis)
-│   ├── favicon.png
-│   └── llms.txt
-├── src/
-│   ├── data/i18n.ts                # dicionário de traduções (PT/EN/ES)
-│   ├── layouts/BaseLayout.astro    # head + scripts + chrome compartilhado
-│   ├── components/                 # Navbar, Hero, About, Skills, ... (orientados por locale)
-│   └── pages/
-│       ├── index.astro             # PT (raiz)
-│       ├── en/index.astro
-│       └── es/index.astro
-├── astro.config.mjs
-├── tsconfig.json
-├── package.json
-├── vercel.json                     # cache headers
-└── README.md
-```
-
-## Scripts
+First, run the development server:
 
 ```bash
-npm install      # instala dependências
-npm run dev      # dev server com HMR em http://localhost:4321
-npm run build    # gera site estático em dist/
-npm run preview  # serve o dist/ localmente
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Deploy
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Vercel detecta o projeto Astro automaticamente via `package.json` e builda para `dist/`.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-`vercel.json` define:
-- `/assets/*` e `/_astro/*` com cache `immutable` (1 ano)
-- `llms.txt` com `Content-Type: text/plain`
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Adicionar/editar conteúdo
+## Learn More
 
-- **Strings traduzíveis** → `src/data/i18n.ts` (os 3 objetos `pt`, `en`, `es`)
-- **Estrutura de uma seção** → componente correspondente em `src/components/`
-- **Novos assets** → `public/assets/...` (sem rebuild necessário no dev)
+To learn more about Next.js, take a look at the following resources:
 
-## Currículos
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-- PT — [`/assets/static/Curriculo_Jesse_Oliveira_PT.pdf`](public/assets/static/Curriculo_Jesse_Oliveira_PT.pdf)
-- EN — [`/assets/static/Resume_Jesse_Oliveira_EN.pdf`](public/assets/static/Resume_Jesse_Oliveira_EN.pdf)
-- ES — [`/assets/static/CV_Jesse_Oliveira_ES.pdf`](public/assets/static/CV_Jesse_Oliveira_ES.pdf)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Contato
+## Deploy on Vercel
 
-- **Email:** dev.jesseoliveira@gmail.com
-- **GitHub:** [@jesseld](https://github.com/jesseld)
-- **LinkedIn:** [jesseoliveira10](https://www.linkedin.com/in/jesseoliveira10/)
-- **WhatsApp:** [+55 75 98828-7627](https://wa.me/5575988287627)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Licença
-
-MIT — veja [LICENSE](LICENSE).
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
