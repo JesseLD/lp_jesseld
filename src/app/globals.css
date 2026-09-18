@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  /* Marca: tirado do cartão e do post */
+  --color-navy: #001d49;
+  --color-navy-deep: #00112e;
+  --color-navy-soft: #0b2c63;
+  --color-sun: #ffd72c;
+  --color-gold: #e4b800;
+  --color-shelf: #eef1f7;
+  --color-mist: #a9b8d6;
+
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+
+  --animate-marquee: marquee 38s linear infinite;
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--color-navy);
+  color: #fff;
+}
+
+::selection {
+  background: var(--color-sun);
+  color: var(--color-navy);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-sun);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Recorte angulado da marca (o mesmo corte do post) */
+.cut-tr {
+  clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 0 100%);
+}
+.cut-bl {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 28px 100%, 0 calc(100% - 28px));
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

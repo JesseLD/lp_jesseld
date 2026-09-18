@@ -1,23 +1,45 @@
-# Dependencies
-node_modules/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Astro
-dist/
-.astro/
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-# OS / editor
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
 .DS_Store
-Thumbs.db
-.vscode/
-.idea/
-*.swp
+*.pem
 
-# Logs
-*.log
+# debug
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
 
-# Vercel
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
 .vercel
 
-# Legacy backup (pre-Astro) — can delete when confident
-.legacy/
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# local screenshots / tooling
+.playwright-mcp/
+/*.png
