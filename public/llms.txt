@@ -14,7 +14,7 @@
 - **Localização:** Valença, BA — Brasil
 - **Atuação:** Desenvolvimento Full Stack, Mobile e ambientes Linux
 - **Formação:** Tecnólogo em Análise e Desenvolvimento de Sistemas — IFBA Campus Valença (2023–2026, em curso)
-- **Emprego atual:** Desenvolvedor Full Stack na Reale Tech (desde 2023)
+- **Experiência:** Desenvolvedor Full Stack na Reale Tech (2023–2026)
 
 ## Stack
 

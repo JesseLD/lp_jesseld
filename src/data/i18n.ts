@@ -2,24 +2,25 @@ export type Locale = 'pt' | 'en' | 'es';
 
 export const locales: Locale[] = ['pt', 'en', 'es'];
 
-// Ano em que comecei como dev Full Stack na Reale Tech.
-// A partir daqui o "Há X anos" do about é calculado dinamicamente em build.
+// Período em que atuei como dev Full Stack na Reale Tech.
+// Saí em 2026, então a duração é fixa (não incrementa mais com o passar dos anos).
 const REALE_START_YEAR = 2023;
+const REALE_END_YEAR = 2026;
 
-export function yearsOfExperience(now = new Date()): number {
-  return Math.max(1, now.getFullYear() - REALE_START_YEAR);
+export function yearsOfExperience(): number {
+  return Math.max(1, REALE_END_YEAR - REALE_START_YEAR);
 }
 
-export function yearsPhrase(locale: Locale, now = new Date()): string {
-  const years = yearsOfExperience(now);
+export function yearsPhrase(locale: Locale): string {
+  const years = yearsOfExperience();
   if (locale === 'pt') {
-    return years === 1 ? 'Há 1 ano' : `Há ${years} anos`;
+    return years === 1 ? '1 ano' : `${years} anos`;
   }
   if (locale === 'en') {
     return years === 1 ? '1 year' : `${years} years`;
   }
   // es
-  return years === 1 ? 'Hace 1 año' : `Hace ${years} años`;
+  return years === 1 ? '1 año' : `${years} años`;
 }
 
 export const cvPath: Record<Locale, string> = {
@@ -95,7 +96,7 @@ type UI = {
   experienceRole: string;
   experienceCompany: string;
   experienceDesc: string;
-  experiencePresent: string;
+  experienceEnd: string;
   experienceSkills: [string, string, string, string];
   footerCtaLabel: string;
   footerCtaHeading: [string, string];
@@ -125,7 +126,7 @@ const pt: UI = {
   aboutStat: ['Anos exp.', 'Tecnologias', 'Projetos'],
   aboutRole: 'Full Stack & Mobile Developer',
   aboutParagraphs: [
-    'Sou Jessé, dev em Valença/BA. {{yearsPhrase}} faço Full Stack na Reale Tech. Toda vez que alguém me traz um problema, o que me ganha é aquele "não sei, mas vou descobrir" — é isso que me faz continuar. A ferramenta mudou ao longo dos anos; essa curiosidade, não.',
+    'Sou Jessé, dev em Valença/BA. Passei {{yearsPhrase}} fazendo Full Stack na Reale Tech. Toda vez que alguém me traz um problema, o que me ganha é aquele "não sei, mas vou descobrir" — é isso que me faz continuar. A ferramenta mudou ao longo dos anos; essa curiosidade, não.',
     'A stack hoje é <strong>React, Tailwind, PHP, MySQL, Node.js, Dart/Flutter, Python</strong> — o que o projeto pedir. Se tem Linux no meio, melhor ainda.',
     'Gosto mais do momento em que o sistema sai do papel e alguém de verdade usa — mesmo que seja pra reclamar. Prefiro projeto com restrição clara a liberdade total. E se você acha café uma personalidade, a gente provavelmente se entende.',
   ],
@@ -187,11 +188,11 @@ const pt: UI = {
   },
   experienceLabel: '// Experiência Profissional',
   experienceHeading: ['Onde eu', '<i class="serif-accent">atuei</i><span class="accent">.</span>'],
-  experienceBadge: 'Emprego Atual',
+  experienceBadge: 'Experiência',
   experienceRole: 'Desenvolvedor Full Stack',
   experienceCompany: 'Reale Tech — Soluções em Tecnologia da Informação',
   experienceDesc: 'Toco projeto do começo — entender o que o cliente precisa de verdade — até o deploy. Stacks que já entreguei: Laravel + React, Flutter + PHP, e bastante manutenção de código legado que ninguém mais queria olhar.',
-  experiencePresent: 'Atual',
+  experienceEnd: '2026',
   experienceSkills: ['Desenvolvimento Web', 'Mobile', 'Banco de Dados', 'Versionamento'],
   footerCtaLabel: '// Vamos conversar?',
   footerCtaHeading: ['Tem um projeto', 'em mente<span class="accent">?</span>'],
@@ -221,7 +222,7 @@ const en: UI = {
   aboutStat: ['Years exp.', 'Technologies', 'Projects'],
   aboutRole: 'Full Stack & Mobile Developer',
   aboutParagraphs: [
-    "I'm Jessé, a dev based in Valença, Brazil. {{yearsPhrase}} Full Stack at Reale Tech. Every time someone brings me a problem, what gets me is that \"I don't know yet, but I'll figure it out\" — that's what keeps me going. The tools have changed over the years; that curiosity hasn't.",
+    "I'm Jessé, a dev based in Valença, Brazil. I spent {{yearsPhrase}} doing Full Stack at Reale Tech. Every time someone brings me a problem, what gets me is that \"I don't know yet, but I'll figure it out\" — that's what keeps me going. The tools have changed over the years; that curiosity hasn't.",
     'Today the stack is <strong>React, Tailwind, PHP, MySQL, Node.js, Dart/Flutter, Python</strong> — whatever the project needs. Bonus points if Linux is in the mix.',
     "What I like most is the moment a system leaves the doc and someone actually uses it — even if only to complain. I'd rather work with a clear constraint than total freedom. And if you consider coffee a personality trait, we'll probably get along.",
   ],
@@ -283,11 +284,11 @@ const en: UI = {
   },
   experienceLabel: '// Professional Experience',
   experienceHeading: ['Where I', '<i class="serif-accent">worked</i><span class="accent">.</span>'],
-  experienceBadge: 'Current Role',
+  experienceBadge: 'Experience',
   experienceRole: 'Full Stack Developer',
   experienceCompany: 'Reale Tech — Information Technology Solutions',
   experienceDesc: "I take projects from start — figuring out what the client actually needs — all the way to deploy. Stacks I've shipped: Laravel + React, Flutter + PHP, and plenty of legacy code nobody else wanted to touch.",
-  experiencePresent: 'Present',
+  experienceEnd: '2026',
   experienceSkills: ['Web Development', 'Mobile', 'Databases', 'Version Control'],
   footerCtaLabel: "// Let's talk?",
   footerCtaHeading: ['Got a project', 'in mind<span class="accent">?</span>'],
@@ -317,7 +318,7 @@ const es: UI = {
   aboutStat: ['Años exp.', 'Tecnologías', 'Proyectos'],
   aboutRole: 'Full Stack & Mobile Developer',
   aboutParagraphs: [
-    'Soy Jessé, dev en Valença/BA, Brasil. {{yearsPhrase}} que hago Full Stack en Reale Tech. Cada vez que alguien me trae un problema, lo que me gana es ese "todavía no lo sé, pero voy a descubrirlo" — es eso lo que me mantiene andando. Las herramientas cambiaron con los años; esa curiosidad, no.',
+    'Soy Jessé, dev en Valença/BA, Brasil. Pasé {{yearsPhrase}} haciendo Full Stack en Reale Tech. Cada vez que alguien me trae un problema, lo que me gana es ese "todavía no lo sé, pero voy a descubrirlo" — es eso lo que me mantiene andando. Las herramientas cambiaron con los años; esa curiosidad, no.',
     'El stack hoy es <strong>React, Tailwind, PHP, MySQL, Node.js, Dart/Flutter, Python</strong> — lo que pida el proyecto. Y si hay Linux de por medio, mejor todavía.',
     'Lo que más disfruto es el momento en que el sistema sale del documento y alguien lo usa de verdad — aunque sea para quejarse. Prefiero trabajar con una restricción clara que con libertad total. Y si para vos el café cuenta como personalidad, probablemente nos vamos a entender.',
   ],
@@ -379,11 +380,11 @@ const es: UI = {
   },
   experienceLabel: '// Experiencia Profesional',
   experienceHeading: ['Dónde he', '<i class="serif-accent">trabajado</i><span class="accent">.</span>'],
-  experienceBadge: 'Empleo Actual',
+  experienceBadge: 'Experiencia',
   experienceRole: 'Desarrollador Full Stack',
   experienceCompany: 'Reale Tech — Soluciones en Tecnologías de la Información',
   experienceDesc: 'Llevo proyectos desde el inicio — entender qué necesita el cliente de verdad — hasta el deploy. Stacks que entregué: Laravel + React, Flutter + PHP, y bastante mantenimiento de código legacy que nadie más quería tocar.',
-  experiencePresent: 'Actual',
+  experienceEnd: '2026',
   experienceSkills: ['Desarrollo Web', 'Mobile', 'Bases de Datos', 'Versionado'],
   footerCtaLabel: '// ¿Hablamos?',
   footerCtaHeading: ['¿Tienes un proyecto', 'en mente<span class="accent">?</span>'],
