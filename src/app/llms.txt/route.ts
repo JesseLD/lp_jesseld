@@ -30,6 +30,13 @@ export function GET() {
     }
     lines.push('');
   }
-  lines.push('## Páginas', '', `- [Início](${site.url})`, `- [Todos os produtos](${site.url}/produtos)`, '');
+  lines.push(
+    '## Páginas',
+    '',
+    `- [Início](${site.url})`,
+    `- [Todos os produtos](${site.url}/produtos)`,
+    `- [Jesus](${site.url}/jesus): o que Jessé crê como cristão, a mensagem do evangelho e um convite para conversar.`,
+    '',
+  );
   return new Response(lines.join('\n'), { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 }

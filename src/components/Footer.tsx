@@ -68,7 +68,12 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <p className="mt-10 text-xs text-navy/60">© {new Date().getFullYear()} {site.name}</p>
+        <div className="mt-10 flex flex-wrap items-center justify-between gap-3 text-xs text-navy/60">
+          <p>© {new Date().getFullYear()} {site.name}</p>
+          <Link href="/jesus" className="font-bold text-navy hover:underline">
+            Tudo isso aqui é por causa d&rsquo;Ele. Jesus é o Senhor.
+          </Link>
+        </div>
       </div>
     </footer>
   );

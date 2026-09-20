@@ -81,6 +81,13 @@ export default function Home() {
               <p>
                 Trabalho com React, Next.js, Laravel, Flutter e o que mais o projeto pedir.
               </p>
+              <p>
+                Ah, e sou cristão. Se quiser saber o que eu creio,{' '}
+                <Link href="/jesus" className="font-bold text-sun underline decoration-2 underline-offset-4 hover:text-white">
+                  escrevi aqui
+                </Link>
+                .
+              </p>
             </div>
             <a
               href={whatsappLink()}
