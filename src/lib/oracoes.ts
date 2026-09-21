@@ -10,8 +10,11 @@ export type Oracao = {
 
 const PREFIXO = 'oracoes/';
 
-/** Sem o Blob configurado (ex.: rodando local), grava em .data/ pra não perder nada. */
-const temBlob = () => Boolean(process.env.BLOB_READ_WRITE_TOKEN);
+/**
+ * Na Vercel o Blob autentica de dois jeitos: pelo token de leitura/escrita ou por OIDC,
+ * que injeta só o BLOB_STORE_ID. Rodando local, sem nenhum dos dois, grava em arquivo.
+ */
+const temBlob = () => Boolean(process.env.BLOB_READ_WRITE_TOKEN || process.env.BLOB_STORE_ID);
 
 async function localDir() {
   const { mkdir } = await import('node:fs/promises');
