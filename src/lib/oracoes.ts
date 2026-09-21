@@ -1,5 +1,5 @@
 import 'server-only';
-import { get, list, put } from '@vercel/blob';
+import { del, get, list, put } from '@vercel/blob';
 
 export type Oracao = {
   id: string;
@@ -7,6 +7,9 @@ export type Oracao = {
   pedido: string;
   criadoEm: string;
 };
+
+/** Caminho do arquivo desse pedido, do mesmo jeito em que ele foi gravado */
+const caminho = (o: Pick<Oracao, 'id' | 'criadoEm'>) => `${PREFIXO}${o.criadoEm}-${o.id}.json`;
 
 const PREFIXO = 'oracoes/';
 
@@ -30,7 +33,7 @@ export async function salvarOracao(nome: string, pedido: string): Promise<Oracao
     pedido,
     criadoEm: new Date().toISOString(),
   };
-  const nomeArquivo = `${PREFIXO}${registro.criadoEm}-${registro.id}.json`;
+  const nomeArquivo = caminho(registro);
   const conteudo = JSON.stringify(registro, null, 2);
 
   if (temBlob()) {
@@ -70,4 +73,13 @@ export async function listarOracoes(): Promise<Oracao[]> {
   }
 
   return registros.sort((a, b) => b.criadoEm.localeCompare(a.criadoEm));
+}
+
+export async function excluirOracao(id: string, criadoEm: string) {
+  if (temBlob()) {
+    await del(caminho({ id, criadoEm }));
+  } else {
+    const { rm } = await import('node:fs/promises');
+    await rm(`${await localDir()}/${id}.json`, { force: true });
+  }
 }
