@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
-import { listarOracoes } from '@/lib/oracoes';
+import { revalidatePath } from 'next/cache';
+import { listarOracoes, excluirOracao } from '@/lib/oracoes';
 
 export const metadata: Metadata = { title: 'Pedidos de oração', robots: { index: false, follow: false } };
 export const dynamic = 'force-dynamic';
@@ -13,6 +14,14 @@ async function entrar(formData: FormData) {
   if (senha && senha === process.env.ORACOES_SENHA) {
     (await cookies()).set(COOKIE, senha, { httpOnly: true, sameSite: 'lax', secure: true, maxAge: 60 * 60 * 24 * 30 });
   }
+}
+
+async function apagar(formData: FormData) {
+  'use server';
+  const senha = process.env.ORACOES_SENHA;
+  if (!senha || (await cookies()).get(COOKIE)?.value !== senha) return;
+  await excluirOracao(String(formData.get('id') ?? ''), String(formData.get('criadoEm') ?? ''));
+  revalidatePath('/oracoes');
 }
 
 const dataHora = (iso: string) =>
@@ -68,9 +77,18 @@ export default async function OracoesPage() {
           <li key={o.id} className="cut-tr bg-navy-soft p-5">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <h2 className="font-display text-xl font-bold">{o.nome}</h2>
-              <time dateTime={o.criadoEm} className="text-sm text-mist">
-                {dataHora(o.criadoEm)}
-              </time>
+              <div className="flex items-center gap-3">
+                <time dateTime={o.criadoEm} className="text-sm text-mist">
+                  {dataHora(o.criadoEm)}
+                </time>
+                <form action={apagar}>
+                  <input type="hidden" name="id" value={o.id} />
+                  <input type="hidden" name="criadoEm" value={o.criadoEm} />
+                  <button type="submit" className="rounded-full border border-white/20 px-3 py-1 text-xs font-bold text-mist hover:border-sun hover:text-sun">
+                    Apagar
+                  </button>
+                </form>
+              </div>
             </div>
             {o.pedido ? (
               <p className="mt-2 whitespace-pre-wrap text-white/85">{o.pedido}</p>
