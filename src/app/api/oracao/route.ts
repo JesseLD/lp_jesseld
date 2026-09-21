@@ -21,14 +21,6 @@ export async function POST(request: Request) {
     return Response.json({ ok: true });
   } catch (erro) {
     console.error('Falha ao salvar pedido de oração', erro);
-    return Response.json(
-      {
-        erro: 'Não consegui salvar agora. Tenta de novo?',
-        // temporário: diagnóstico do armazenamento
-        detalhe: erro instanceof Error ? `${erro.name}: ${erro.message}` : 'erro desconhecido',
-        temToken: Boolean(process.env.BLOB_READ_WRITE_TOKEN),
-      },
-      { status: 500 },
-    );
+    return Response.json({ erro: 'Não consegui salvar agora. Tenta de novo?' }, { status: 500 });
   }
 }
