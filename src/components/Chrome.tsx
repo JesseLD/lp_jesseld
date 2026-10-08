@@ -10,7 +10,7 @@ export function TopBar() {
       <div className="mx-auto flex max-w-6xl items-center justify-center gap-3 px-4 py-2 text-sm">
         <p className="truncate">
           <strong className="font-bold">Orçamento sem compromisso</strong>
-          <span className="hidden sm:inline"> — me conta o que você precisa e eu te respondo no mesmo dia.</span>
+          <span className="hidden sm:inline"> — me conta o que você precisa que eu te respondo.</span>
         </p>
         <a
           href={whatsappLink()}

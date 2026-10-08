@@ -8,15 +8,15 @@ import { whatsappLink } from '@/data/site';
 const steps = [
   {
     title: 'Você me chama no WhatsApp',
-    text: 'Conta o que precisa do jeito que estiver, pode ser áudio. Eu te respondo com o que dá pra fazer, prazo e valor.',
+    text: 'Conta o que precisa do jeito que estiver, pode ser áudio. Eu respondo o que dá pra fazer, o prazo e o valor.',
   },
   {
     title: 'Eu construo e você acompanha',
-    text: 'Você recebe um link pra ver o projeto andando e pedir ajuste antes de ficar pronto, não depois.',
+    text: 'Você recebe um link pra ver o projeto andando e pedir ajuste no meio do caminho, não só no fim.',
   },
   {
     title: 'Coloco no ar e continuo por perto',
-    text: 'Cuido do domínio, da hospedagem e do suporte depois da entrega. Deu problema, você fala comigo direto.',
+    text: 'Cuido do domínio e da hospedagem. Depois da entrega, se precisar mexer em alguma coisa, é só me chamar.',
   },
 ];
 
@@ -31,10 +31,10 @@ export default function Home() {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <h2 className="font-display text-4xl font-black italic tracking-tight md:text-5xl">
-                Abre, testa, mexe.
+                Abre e testa.
               </h2>
               <p className="mt-3 max-w-xl text-lg text-navy/75">
-                Cada produto aqui é uma demo que funciona ou um projeto que está no ar com cliente de verdade. Viu um parecido com o que você precisa? Eu adapto pro seu negócio.
+                Uns são demos que montei pra você mexer à vontade, outros são projetos que estão no ar. Se algum parecer com o que você precisa, dá pra adaptar.
               </p>
             </div>
             <Link href="/produtos" className="font-bold underline decoration-sun decoration-4 underline-offset-4 hover:decoration-navy">
@@ -73,13 +73,13 @@ export default function Home() {
             <h2 className="font-display text-4xl font-black italic tracking-tight md:text-5xl">Prazer, Jessé.</h2>
             <div className="mt-5 max-w-xl space-y-4 text-lg text-white/85">
               <p>
-                Sou de Valença/BA e é daqui que eu construo sites, sistemas e aplicativos. Tenho mais de 3 anos no mercado. Já fiz sistema de cobrança pra prefeitura, votação online com milhares de votos em tempo real e app de gestão que roda em igrejas toda semana.
+                Sou de Valença/BA e trabalho com sites, sistemas e aplicativos desde 2023. Os projetos que mais me ensinaram até aqui foram um sistema de cobrança pra prefeitura, uma plataforma de votação online e um app de gestão usado toda semana em igrejas.
               </p>
               <p>
-                Hoje eu atendo direto. Você fala comigo, não com um atendente, e quem constrói é a mesma pessoa que vai te ajudar quando precisar mexer em alguma coisa.
+                Trabalho sozinho. Quem conversa com você é quem escreve o código, o que tem o lado bom de não ter intermediário e o limite de eu pegar poucos projetos por vez.
               </p>
               <p>
-                Trabalho com React, Next.js, Laravel, Flutter e o que mais o projeto pedir.
+                Uso React, Next.js, Laravel e Flutter. Se o seu projeto pedir outra coisa, eu falo.
               </p>
               <p>
                 Ah, e sou cristão. Se quiser saber o que eu creio,{' '}

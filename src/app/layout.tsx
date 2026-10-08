@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     default: `${site.name} — ${site.tagline} em ${site.city}/${site.region}`,
     template: `%s | ${site.name}`,
   },
-  description: `${site.pitch} Aplicativos, sites e sistemas sob medida para pequenos negócios. Veja demos de verdade e peça orçamento pelo WhatsApp.`,
+  description: `${site.pitch} Aplicativos, sites e sistemas para pequenos negócios, com demos pra testar antes de pedir orçamento.`,
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
