@@ -40,7 +40,7 @@ export function Hero() {
 
       <div className="relative mx-auto grid max-w-6xl gap-10 px-4 pb-16 pt-10 md:grid-cols-[1.1fr_1fr] md:items-center md:pb-28 md:pt-16">
         <div>
-          <p className="text-mist">Dev em {site.city}/{site.region}, atendendo o Brasil todo</p>
+          <p className="text-mist">Desenvolvedor em {site.city}/{site.region}</p>
 
           <h1 className="mt-3">
             <span className="sr-only">Sites, sistemas e aplicativos sob medida para o seu negócio</span>

@@ -1,7 +1,7 @@
 export const site = {
   name: 'Jessé Oliveira',
   tagline: 'Sites, sistemas e aplicativos',
-  pitch: 'Construo, coloco no ar e continuo por perto sempre que precisar.',
+  pitch: 'Faço sites, sistemas e aplicativos sob medida. Depois de no ar, continuo por perto pra ajustar o que precisar.',
   url: 'https://www.jesseoliveira.com.br',
   city: 'Valença',
   region: 'BA',

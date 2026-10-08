@@ -48,7 +48,7 @@ export const products: Product[] = [
     headline: 'App de agendamento para barbearia',
     audience: 'Barbearias e salões com 1 a 6 cadeiras',
     summary:
-      'O cliente escolhe o barbeiro, o serviço e o horário livre sem precisar mandar mensagem. Você vê a agenda do dia e para de perder horário com quem esquece.',
+      'O cliente escolhe o barbeiro, o serviço e um horário livre sem precisar mandar mensagem. Você acompanha a agenda do dia pelo celular.',
     features: [
       'Agenda por barbeiro com horários livres em tempo real',
       'Cliente escolhe serviço, profissional e horário em 3 toques',
@@ -86,12 +86,12 @@ export const products: Product[] = [
     headline: 'Site institucional para empresa de agricultura',
     audience: 'Empresas, fazendas e cooperativas que precisam passar confiança',
     summary:
-      'Um site que apresenta a empresa, mostra os produtos e leva o contato direto pro comercial. Feito pra aparecer no Google quando alguém procura pelo serviço na região.',
+      'Apresenta a empresa, mostra os produtos e leva o contato pro comercial. As páginas e os textos ficam organizados pro Google entender do que a empresa trabalha.',
     features: [
       'Páginas de empresa, produtos e contato',
       'Otimizado pro Google e pra leitura por IA',
       'Botão de WhatsApp em todas as páginas',
-      'Rápido até em internet fraca do interior',
+      'Leve, pra abrir rápido mesmo com internet fraca',
     ],
     url: '/demos/site-agro',
     device: 'desktop',
@@ -105,7 +105,7 @@ export const products: Product[] = [
     headline: 'Loja online estilo marketplace',
     audience: 'Lojas que querem vender pela internet com a própria marca',
     summary:
-      'Vitrine com busca, categorias, ofertas e carrinho, no estilo das grandes lojas. O pedido pode fechar no Pix ou cair direto no seu WhatsApp.',
+      'Vitrine com busca, categorias, ofertas e carrinho, no formato que as pessoas já conhecem das lojas grandes. O pedido fecha no Pix ou chega no seu WhatsApp.',
     features: [
       'Busca, categorias e página de oferta',
       'Carrinho com frete e cupom',
@@ -124,7 +124,7 @@ export const products: Product[] = [
     headline: 'Portal de notícias de Valença e do Baixo Sul',
     audience: 'Portais, blogs e veículos de comunicação regionais',
     summary:
-      'Portal no ar com plantão de notícias, editorias locais, mais lidas, newsletter e clima. A redação publica sozinha, sem depender de mim.',
+      'Portal no ar com plantão de notícias, editorias locais, mais lidas, newsletter e clima. A redação publica por conta própria, sem depender de mim.',
     features: [
       'Plantão com as últimas notícias',
       'Editorias: Valença, Baixo Sul, Polícia, Futebol, Emprego e mais',
@@ -143,7 +143,7 @@ export const products: Product[] = [
     headline: 'Sistema de garçom para bares e restaurantes',
     audience: 'Bares, restaurantes e lanchonetes com atendimento na mesa',
     summary:
-      'O garçom lança o pedido no celular, a cozinha recebe na hora e a conta da mesa fecha sem erro de soma.',
+      'O garçom lança o pedido no celular e a cozinha recebe na hora. No fim, a conta sai somada, com opção de dividir por pessoa.',
     features: [
       'Mapa de mesas com status livre, ocupada e fechando',
       'Pedido lançado no celular e enviado pra cozinha',

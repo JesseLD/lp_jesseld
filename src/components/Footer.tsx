@@ -14,7 +14,7 @@ export function Footer() {
           Tem uma ideia rodando na cabeça?
         </h2>
         <p className="mt-4 max-w-md text-lg">
-          Me manda do jeito que estiver. Eu te respondo com o que dá pra fazer, o prazo e o valor.
+          Me manda do jeito que estiver. Eu respondo o que dá pra fazer, o prazo e o valor. Se não for coisa que eu faça bem, digo isso também.
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-5">
           <a

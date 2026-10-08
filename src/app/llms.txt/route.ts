@@ -13,7 +13,7 @@ export function GET() {
     `Desenvolvedor em ${site.city}/${site.region}, Brasil. Atende o Brasil todo, online.`,
     `Orçamento pelo WhatsApp: ${site.phoneDisplay} (https://wa.me/${site.whatsapp}). Preço só por orçamento.`,
     '',
-    'Experiência: mais de 3 anos no mercado, com sistema de cobrança para prefeitura, votação online com milhares de votos em tempo real e app de gestão usado em igrejas toda semana.',
+    'Experiência: trabalha com desenvolvimento desde 2023. Entre os projetos: sistema de cobrança para prefeitura, plataforma de votação online e app de gestão usado em igrejas. Trabalha sozinho, sem equipe.',
     'Tecnologias: React, Next.js, Laravel, PHP, Flutter, Node.js, MySQL.',
     '',
     '## Produtos',
